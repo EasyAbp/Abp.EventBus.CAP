@@ -8,15 +8,16 @@
     <Description>abp CAP 的mysql 持久化</Description>
     <RepositoryType>github</RepositoryType>
     <PackageTags>cap, abp, mysql</PackageTags>
-    <Version>2.0.0</Version>
+    <Version>2.2.1</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/EasyAbp/Yhd.Abp.EventBus.CAP</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="3.0.2" />
-    <PackageReference Include="Volo.Abp.Core" Version="2.0.1" />
-    <PackageReference Include="Volo.Abp.Dapper" Version="2.0.1" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Mysql" Version="2.0.1" />
+    <PackageReference Include="Volo.Abp.Core" Version="2.2.1" />
+    <PackageReference Include="Volo.Abp.Dapper" Version="2.2.1" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Mysql" Version="2.2.1" />
  </ItemGroup>
 </Project>
