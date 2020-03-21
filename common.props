@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/EasyAbp/Abp.EventBus.CAP</RepositoryUrl>
     <PackageTags>abp module easyabp eventbus event cap</PackageTags>
     <Company>EasyAbp</Company>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
