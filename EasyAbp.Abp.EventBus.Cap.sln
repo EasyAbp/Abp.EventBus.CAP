@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App1", "sample\App1\App1.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App2", "sample\App2\App2.csproj", "{6939A01F-2382-4483-A2DD-FDAF08FE6081}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yhd.Abp.CAP.MySql", "src\Yhd.Abp.CAP.MySql\Yhd.Abp.CAP.MySql.csproj", "{372C3865-7D92-4FC5-8726-D157D8C7297D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyAbp.Abp.EventBus.CAP.MySql", "src\EasyAbp.Abp.EventBus.CAP.MySql\EasyAbp.Abp.EventBus.CAP.MySql.csproj", "{372C3865-7D92-4FC5-8726-D157D8C7297D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yhd.Abp.CAP.SqlServer", "src\Yhd.Abp.CAP.SqlServer\Yhd.Abp.CAP.SqlServer.csproj", "{D4FDF16D-873F-41E2-88B8-21E8088DAC76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyAbp.Abp.EventBus.CAP.SqlServer", "src\EasyAbp.Abp.EventBus.CAP.SqlServer\EasyAbp.Abp.EventBus.CAP.SqlServer.csproj", "{D4FDF16D-873F-41E2-88B8-21E8088DAC76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yhd.Abp.CAP.PostgreSql", "src\Yhd.Abp.CAP.PostgreSql\Yhd.Abp.CAP.PostgreSql.csproj", "{55A99E54-1906-460E-8F0C-47FD0B9BD801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyAbp.Abp.EventBus.CAP.PostgreSql", "src\EasyAbp.Abp.EventBus.CAP.PostgreSql\EasyAbp.Abp.EventBus.CAP.PostgreSql.csproj", "{55A99E54-1906-460E-8F0C-47FD0B9BD801}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{1F570C63-EB39-4A9B-95F6-E44E2B2124DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yhd.Abp.EventBus.CAP", "src\Yhd.Abp.EventBus.CAP\Yhd.Abp.EventBus.CAP.csproj", "{2BEBEB82-E649-4F38-9E1F-499D8A956887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyAbp.Abp.EventBus.CAP", "src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj", "{2BEBEB82-E649-4F38-9E1F-499D8A956887}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

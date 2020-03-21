@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using Volo.Abp.Modularity;
 
-namespace Yhd.Abp.EventBus.Cap
+namespace EasyAbp.Abp.EventBus.Cap
 {
     public static class ServiceCollectionExtensions
     {

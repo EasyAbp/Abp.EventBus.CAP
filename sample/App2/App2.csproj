@@ -19,8 +19,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Yhd.Abp.CAP.PostgreSql\Yhd.Abp.CAP.PostgreSql.csproj" />
-    <ProjectReference Include="..\..\src\Yhd.Abp.EventBus.CAP\Yhd.Abp.EventBus.CAP.csproj" />
+    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP.PostgreSql\EasyAbp.Abp.EventBus.CAP.PostgreSql.csproj" />
+    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj" />
     <ProjectReference Include="..\SharedModule\SharedModule.csproj" />
   </ItemGroup>
   

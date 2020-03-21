@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Yhd.Abp.CAP.MySql\Yhd.Abp.CAP.MySql.csproj" />
-    <ProjectReference Include="..\..\src\Yhd.Abp.EventBus.CAP\Yhd.Abp.EventBus.CAP.csproj" />
+    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP.MySql\EasyAbp.Abp.EventBus.CAP.MySql.csproj" />
+    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj" />
     <ProjectReference Include="..\SharedModule\SharedModule.csproj" />
   </ItemGroup>
 

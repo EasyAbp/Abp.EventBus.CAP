@@ -10,8 +10,8 @@ using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
-using Yhd.Abp.CAP.MySql;
-using Yhd.Abp.EventBus.Cap;
+using EasyAbp.Abp.EventBus.CAP.MySql;
+using EasyAbp.Abp.EventBus.Cap;
 
 namespace App1
 {

@@ -2,7 +2,7 @@ using Volo.Abp.Dapper;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
 
-namespace Yhd.Abp.CAP.SqlServer
+namespace EasyAbp.Abp.EventBus.CAP.SqlServer
 {
     [DependsOn(
         typeof(AbpEntityFrameworkCoreSqlServerModule),

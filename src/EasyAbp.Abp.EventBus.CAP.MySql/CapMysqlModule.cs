@@ -5,7 +5,7 @@ using Volo.Abp.Dapper;
 using Volo.Abp.EntityFrameworkCore.MySQL;
 using Volo.Abp.Modularity;
 
-namespace Yhd.Abp.CAP.MySql
+namespace EasyAbp.Abp.EventBus.CAP.MySql
 {
     [DependsOn(
        typeof(AbpEntityFrameworkCoreMySQLModule),

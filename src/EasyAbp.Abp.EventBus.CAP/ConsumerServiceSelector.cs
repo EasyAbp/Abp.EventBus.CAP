@@ -11,7 +11,7 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
 
-namespace Yhd.Abp.EventBus.Cap
+namespace EasyAbp.Abp.EventBus.Cap
 {
     [Dependency(ServiceLifetime.Singleton,ReplaceServices = true)]
     [ExposeServices(typeof(IConsumerServiceSelector))]

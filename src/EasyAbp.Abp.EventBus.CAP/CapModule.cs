@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EventBus;
 using Volo.Abp.Modularity;
 
-namespace Yhd.Abp.EventBus.Cap
+namespace EasyAbp.Abp.EventBus.Cap
 {
 
     [DependsOn(typeof(AbpEventBusModule))]

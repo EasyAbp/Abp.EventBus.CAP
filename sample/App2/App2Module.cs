@@ -10,8 +10,8 @@ using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
-using Yhd.Abp.EventBus.Cap;
-using Yhd.Abp.CAP.PostgreSql;
+using EasyAbp.Abp.EventBus.Cap;
+using EasyAbp.Abp.EventBus.CAP.PostgreSql;
 
 namespace App2
 {

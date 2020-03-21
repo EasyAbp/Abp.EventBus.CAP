@@ -12,7 +12,7 @@ using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.Threading;
 
-namespace Yhd.Abp.EventBus.Cap
+namespace EasyAbp.Abp.EventBus.Cap
 {
     [Dependency(ReplaceServices = true)]
     [ExposeServices(typeof(IDistributedEventBus), typeof(CapDistributedEventBus))]
