@@ -12,6 +12,8 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 using EasyAbp.Abp.EventBus.CAP.MySql;
 using EasyAbp.Abp.EventBus.Cap;
+using WorkflowCore.Interface;
+using App1.Saga;
 
 namespace App1
 {
@@ -23,6 +25,8 @@ namespace App1
         typeof(AbpAspNetCoreSerilogModule))]
     public class App1Module : AbpModule
     {
+        private IWorkflowHost workflowHost;
+
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var configuration = context.Services.GetConfiguration();
@@ -43,13 +47,21 @@ namespace App1
 
             context.AddCapEventBus(capOptions =>
             {
-                capOptions.UseEntityFramework<AppDbContext>();
+                //capOptions.UseEntityFramework<AppDbContext>();
+                capOptions.UseInMemoryStorage();
                 capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
                 capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
             });
             ConfigureSwaggerServices(context, configuration);
+
+            ConfigureWorkflowcore(context);
         }
 
+        private static void ConfigureWorkflowcore(ServiceConfigurationContext context)
+        {
+            //context.Services.AddWorkflow();
+            context.Services.AddWorkflow(x => x.UseSqlite(@"Data Source=database.db;", true));
+        }
 
         private static void ConfigureSwaggerServices(ServiceConfigurationContext context, IConfiguration configuration)
         {
@@ -91,6 +103,18 @@ namespace App1
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "App1 API");
             });
             app.UseMvcWithDefaultRouteAndArea();
+        }
+
+        public override void OnPostApplicationInitialization(ApplicationInitializationContext context)
+        {
+            workflowHost = context.ServiceProvider.GetService<IWorkflowHost>();
+            workflowHost.RegisterWorkflow<CompensatingWorkflow>();
+            workflowHost.Start();
+        }
+
+        public override void OnApplicationShutdown(ApplicationShutdownContext context)
+        {
+            workflowHost.Stop();
         }
     }
 }

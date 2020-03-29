@@ -1,0 +1,954 @@
+29-Mar-2020 21:33:50.163 +08:00 [INF] Starting App1.WebHost.
+29-Mar-2020 21:33:53.040 +08:00 [DBG] Hosting starting
+29-Mar-2020 21:33:53.098 +08:00 [INF] User profile is available. Using 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Mar-2020 21:33:53.142 +08:00 [DBG] RabbitMQ configuration:'HostName:localhost, Port:-1, UserName:guest, Password:guest, ExchangeName:cap.default.router'
+29-Mar-2020 21:33:53.208 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-01264004-2011-4681-ba4b-802b006b94ba.xml'.
+29-Mar-2020 21:33:53.233 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-60390479-a25f-400a-a602-b9d127a8c385.xml'.
+29-Mar-2020 21:33:53.233 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-6162c08b-7ec3-4dee-8502-0d29133a5d83.xml'.
+29-Mar-2020 21:33:53.234 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-6d91ea21-0af5-4ab3-a2e0-57f5399b0c07.xml'.
+29-Mar-2020 21:33:53.234 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-73ad7d5a-0d16-45e7-971d-4d2bbf0a64f0.xml'.
+29-Mar-2020 21:33:53.234 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-b2c10fea-d1fc-4b00-85ec-6c53a0758200.xml'.
+29-Mar-2020 21:33:53.234 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-d3a51700-4f84-4232-aa5e-9d2e3e038106.xml'.
+29-Mar-2020 21:33:53.239 +08:00 [DBG] Found key "01264004-2011-4681-ba4b-802b006b94ba".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "60390479-a25f-400a-a602-b9d127a8c385".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "6162c08b-7ec3-4dee-8502-0d29133a5d83".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "6d91ea21-0af5-4ab3-a2e0-57f5399b0c07".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "73ad7d5a-0d16-45e7-971d-4d2bbf0a64f0".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "b2c10fea-d1fc-4b00-85ec-6c53a0758200".
+29-Mar-2020 21:33:53.243 +08:00 [DBG] Found key "d3a51700-4f84-4232-aa5e-9d2e3e038106".
+29-Mar-2020 21:33:53.250 +08:00 [DBG] Considering key "60390479-a25f-400a-a602-b9d127a8c385" with expiration date "2020-04-26T05:36:29.9143061+00:00" as default key.
+29-Mar-2020 21:33:53.256 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+29-Mar-2020 21:33:53.258 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+29-Mar-2020 21:33:53.259 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+29-Mar-2020 21:33:53.263 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+29-Mar-2020 21:33:53.265 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+29-Mar-2020 21:33:53.267 +08:00 [DBG] Using key "60390479-a25f-400a-a602-b9d127a8c385" as the default key.
+29-Mar-2020 21:33:53.268 +08:00 [DBG] Key ring with default key "60390479-a25f-400a-a602-b9d127a8c385" was loaded during application startup.
+29-Mar-2020 21:33:53.269 +08:00 [DBG] ### CAP background task is starting.
+29-Mar-2020 21:33:53.270 +08:00 [INF] Starting the processing server.
+29-Mar-2020 21:33:53.275 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:33:53.275 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:33:53.290 +08:00 [DBG] Collecting expired data from table: PublishedMessages
+29-Mar-2020 21:33:53.292 +08:00 [DBG] Collecting expired data from table: ReceivedMessages
+29-Mar-2020 21:33:53.301 +08:00 [INF] ### CAP started!
+29-Mar-2020 21:33:53.348 +08:00 [INF] Loaded ABP modules:
+29-Mar-2020 21:33:53.348 +08:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+29-Mar-2020 21:33:53.348 +08:00 [INF] - EasyAbp.Abp.EventBus.Cap.CapModule
+29-Mar-2020 21:33:53.348 +08:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Data.AbpDataModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Json.AbpJsonModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Dapper.AbpDapperModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - EasyAbp.Abp.EventBus.CAP.MySql.CapMysqlModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Minify.AbpMinifyModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Http.AbpHttpModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.UI.AbpUiModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+29-Mar-2020 21:33:53.349 +08:00 [INF] - App1.App1Module
+29-Mar-2020 21:33:53.790 +08:00 [INF] RabbitMQ consumer registered. --> amq.ctag-8rdiQOxyRzHyA1pE1wpL3w
+29-Mar-2020 21:33:54.864 +08:00 [INF] Starting background tasks
+29-Mar-2020 21:33:54.890 +08:00 [INF] Initialized all ABP modules.
+29-Mar-2020 21:33:54.905 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:33:54.972 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+29-Mar-2020 21:33:54.981 +08:00 [INF] Now listening on: http://localhost:5050
+29-Mar-2020 21:33:54.981 +08:00 [DBG] Loaded hosting startup assembly App1
+29-Mar-2020 21:33:54.982 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+29-Mar-2020 21:33:54.982 +08:00 [INF] Hosting environment: Development
+29-Mar-2020 21:33:54.982 +08:00 [INF] Content root path: C:\workshop\Github\Yhd.Abp.Cap\sample\App1
+29-Mar-2020 21:33:54.982 +08:00 [DBG] Hosting started
+29-Mar-2020 21:33:55.176 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:33:55.218 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" received FIN.
+29-Mar-2020 21:33:55.218 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" received FIN.
+29-Mar-2020 21:33:55.218 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" accepted.
+29-Mar-2020 21:33:55.218 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" accepted.
+29-Mar-2020 21:33:55.220 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" started.
+29-Mar-2020 21:33:55.220 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" started.
+29-Mar-2020 21:33:55.229 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" sending FIN because: "The client closed the connection."
+29-Mar-2020 21:33:55.229 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" sending FIN because: "The client closed the connection."
+29-Mar-2020 21:33:55.233 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" disconnecting.
+29-Mar-2020 21:33:55.233 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" disconnecting.
+29-Mar-2020 21:33:55.238 +08:00 [DBG] Connection id "0HLUJSN9U2U8C" stopped.
+29-Mar-2020 21:33:55.238 +08:00 [DBG] Connection id "0HLUJSN9U2U8D" stopped.
+29-Mar-2020 21:33:55.272 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" accepted.
+29-Mar-2020 21:33:55.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" started.
+29-Mar-2020 21:33:55.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" accepted.
+29-Mar-2020 21:33:55.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" started.
+29-Mar-2020 21:33:55.329 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:33:55.332 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+29-Mar-2020 21:33:55.360 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000001": started reading request body.
+29-Mar-2020 21:33:55.360 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000001": done reading request body.
+29-Mar-2020 21:33:55.529 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:33:55.532 +08:00 [INF] Request finished in 206.6224ms 200 application/json
+29-Mar-2020 21:33:56.427 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:33:56.429 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000002": started reading request body.
+29-Mar-2020 21:33:56.429 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000002": done reading request body.
+29-Mar-2020 21:33:56.431 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:33:56.432 +08:00 [INF] Request finished in 4.9575ms 200 application/json
+29-Mar-2020 21:33:58.037 +08:00 [DBG] Connection id "0HLUJSN9U2U8G" accepted.
+29-Mar-2020 21:33:58.038 +08:00 [DBG] Connection id "0HLUJSN9U2U8G" started.
+29-Mar-2020 21:33:58.039 +08:00 [DBG] Connection id "0HLUJSN9U2U8H" accepted.
+29-Mar-2020 21:33:58.040 +08:00 [DBG] Connection id "0HLUJSN9U2U8H" started.
+29-Mar-2020 21:33:58.041 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/  
+29-Mar-2020 21:33:58.043 +08:00 [DBG] The request path / does not match a supported file type
+29-Mar-2020 21:33:58.077 +08:00 [DBG] No candidates found for the request path '/'
+29-Mar-2020 21:33:58.077 +08:00 [DBG] Request did not match any endpoints
+29-Mar-2020 21:33:58.116 +08:00 [DBG] The request path  does not match the path filter
+29-Mar-2020 21:33:58.118 +08:00 [INF] HTTP GET / responded 404 in 72.3841 ms
+29-Mar-2020 21:33:58.118 +08:00 [DBG] Connection id "0HLUJSN9U2U8G" completed keep alive response.
+29-Mar-2020 21:33:58.119 +08:00 [INF] Request finished in 78.1257ms 404 
+29-Mar-2020 21:33:58.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:33:58.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000003": started reading request body.
+29-Mar-2020 21:33:58.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000003": done reading request body.
+29-Mar-2020 21:33:58.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:33:58.970 +08:00 [INF] Request finished in 9.1766ms 200 application/json
+29-Mar-2020 21:34:00.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:00.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000004": started reading request body.
+29-Mar-2020 21:34:00.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000004": done reading request body.
+29-Mar-2020 21:34:00.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:00.961 +08:00 [INF] Request finished in 2.2771ms 200 application/json
+29-Mar-2020 21:34:02.392 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:02.396 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000005": started reading request body.
+29-Mar-2020 21:34:02.397 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000005": done reading request body.
+29-Mar-2020 21:34:02.404 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:02.406 +08:00 [INF] Request finished in 13.6893ms 200 application/json
+29-Mar-2020 21:34:04.874 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/api/values  
+29-Mar-2020 21:34:04.875 +08:00 [DBG] The request path /api/values does not match a supported file type
+29-Mar-2020 21:34:04.885 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:34:04.889 +08:00 [DBG] 1 candidate(s) found for the request path '/api/values'
+29-Mar-2020 21:34:04.897 +08:00 [DBG] Endpoint 'App1.Controllers.ValuesController.AppMessage (App1)' with route pattern 'api/Values' is valid for the request path '/api/values'
+29-Mar-2020 21:34:04.897 +08:00 [DBG] Request matched endpoint 'App1.Controllers.ValuesController.AppMessage (App1)'
+29-Mar-2020 21:34:04.899 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+29-Mar-2020 21:34:04.901 +08:00 [INF] Executing endpoint 'App1.Controllers.ValuesController.AppMessage (App1)'
+29-Mar-2020 21:34:04.906 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:34:04.939 +08:00 [DBG] Registered model binder providers, in the following order: ["Volo.Abp.AspNetCore.Mvc.ModelBinding.AbpDateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+29-Mar-2020 21:34:04.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:04.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000001": started reading request body.
+29-Mar-2020 21:34:04.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000001": done reading request body.
+29-Mar-2020 21:34:04.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" completed keep alive response.
+29-Mar-2020 21:34:04.963 +08:00 [INF] Request finished in 2.6515ms 200 application/json
+29-Mar-2020 21:34:05.051 +08:00 [INF] Route matched with {action = "AppMessage", controller = "Values", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] AppMessage() on controller App1.Controllers.ValuesController (App1).
+29-Mar-2020 21:34:05.052 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+29-Mar-2020 21:34:05.052 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+29-Mar-2020 21:34:05.052 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)","Volo.Abp.AspNetCore.Mvc.Auditing.AbpAuditActionFilter","Volo.Abp.AspNetCore.Mvc.Response.AbpNoContentActionFilter","Volo.Abp.AspNetCore.Mvc.Features.AbpFeatureActionFilter","Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter","Volo.Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter"]
+29-Mar-2020 21:34:05.053 +08:00 [DBG] Execution plan of exception filters (in the following order): ["Volo.Abp.AspNetCore.Mvc.ExceptionHandling.AbpExceptionFilter"]
+29-Mar-2020 21:34:05.053 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+29-Mar-2020 21:34:05.054 +08:00 [DBG] Executing controller factory for controller App1.Controllers.ValuesController (App1)
+29-Mar-2020 21:34:05.056 +08:00 [DBG] Executed controller factory for controller App1.Controllers.ValuesController (App1)
+29-Mar-2020 21:34:05.172 +08:00 [INF] Executing action method App1.Controllers.ValuesController.AppMessage (App1) - Validation state: "Valid"
+29-Mar-2020 21:34:05.499 +08:00 [INF] Executed action method App1.Controllers.ValuesController.AppMessage (App1), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 321.9409ms.
+29-Mar-2020 21:34:05.514 +08:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+29-Mar-2020 21:34:05.517 +08:00 [DBG] No information found on request to perform content negotiation.
+29-Mar-2020 21:34:05.517 +08:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+29-Mar-2020 21:34:05.517 +08:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+29-Mar-2020 21:34:05.518 +08:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+29-Mar-2020 21:34:05.518 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+29-Mar-2020 21:34:05.525 +08:00 [INF] Executed action App1.Controllers.ValuesController.AppMessage (App1) in 468.2575ms
+29-Mar-2020 21:34:05.526 +08:00 [INF] Executed endpoint 'App1.Controllers.ValuesController.AppMessage (App1)'
+29-Mar-2020 21:34:05.526 +08:00 [INF] HTTP GET /api/values responded 200 in 650.9523 ms
+29-Mar-2020 21:34:05.526 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:05.526 +08:00 [INF] Request finished in 652.0511ms 200 text/plain; charset=utf-8
+29-Mar-2020 21:34:05.670 +08:00 [DBG] Starting step null on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:05.752 +08:00 [DBG] Starting step null on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:05.956 +08:00 [DBG] Starting step null on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:05.963 +08:00 [DBG] Starting step Task1 on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:05.996 +08:00 [INF] App1.Message 2020/3/29 21:34:05 send to the App2.
+29-Mar-2020 21:34:37.902 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:34:37.902 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" received FIN.
+29-Mar-2020 21:34:37.929 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:34:37.930 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:34:37.935 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:37.941 +08:00 [DBG] Got runnable instance df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:37.942 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:34:37.953 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" accepted.
+29-Mar-2020 21:34:37.953 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000007": started reading request body.
+29-Mar-2020 21:34:37.954 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000007": done reading request body.
+29-Mar-2020 21:34:37.955 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:37.955 +08:00 [INF] Request finished in 20.4035ms 200 application/json
+29-Mar-2020 21:34:37.956 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:37.956 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000002": started reading request body.
+29-Mar-2020 21:34:37.956 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000002": done reading request body.
+29-Mar-2020 21:34:37.956 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" completed keep alive response.
+29-Mar-2020 21:34:37.957 +08:00 [INF] Request finished in 1.0584ms 200 application/json
+29-Mar-2020 21:34:37.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" started.
+29-Mar-2020 21:34:37.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" sending FIN because: "The client closed the connection."
+29-Mar-2020 21:34:37.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" disconnecting.
+29-Mar-2020 21:34:37.958 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/cap/published/succeeded?name=&content=  
+29-Mar-2020 21:34:37.978 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:34:37.979 +08:00 [DBG] Connection id "0HLUJSN9U2U8J" accepted.
+29-Mar-2020 21:34:37.983 +08:00 [DBG] Connection id "0HLUJSN9U2U8J" started.
+29-Mar-2020 21:34:37.984 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:37.984 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/cap/published/succeeded?name=&content=  
+29-Mar-2020 21:34:37.984 +08:00 [DBG] Connection id "0HLUJSN9U2U8K" accepted.
+29-Mar-2020 21:34:37.985 +08:00 [DBG] Connection id "0HLUJSN9U2U8K" started.
+29-Mar-2020 21:34:37.985 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.188 +08:00 [DBG] Got runnable instance df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.188 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:34:39.189 +08:00 [DBG] Connection id "0HLUJSN9U2U8L" accepted.
+29-Mar-2020 21:34:39.190 +08:00 [DBG] Connection id "0HLUJSN9U2U8L" started.
+29-Mar-2020 21:34:39.191 +08:00 [DBG] Connection id "0HLUJSN9U2U8M" accepted.
+29-Mar-2020 21:34:39.191 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.193 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000001": started reading request body.
+29-Mar-2020 21:34:39.193 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000001": started reading request body.
+29-Mar-2020 21:34:39.193 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000001": done reading request body.
+29-Mar-2020 21:34:39.193 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000001": done reading request body.
+29-Mar-2020 21:34:39.193 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000001": started reading request body.
+29-Mar-2020 21:34:39.195 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000001": done reading request body.
+29-Mar-2020 21:34:39.195 +08:00 [DBG] Connection id "0HLUJSN9U2U8L" completed keep alive response.
+29-Mar-2020 21:34:39.195 +08:00 [INF] Request finished in 3.9018ms 200 application/json
+29-Mar-2020 21:34:39.196 +08:00 [DBG] Connection id "0HLUJSN9U2U8K" completed keep alive response.
+29-Mar-2020 21:34:39.195 +08:00 [DBG] Connection id "0HLUJSN9U2U8J" completed keep alive response.
+29-Mar-2020 21:34:39.196 +08:00 [INF] Request finished in 1210.837ms 200 application/json
+29-Mar-2020 21:34:39.196 +08:00 [INF] Request finished in 1211.7264ms 200 application/json
+29-Mar-2020 21:34:39.206 +08:00 [DBG] Connection id "0HLUJSN9U2U8M" started.
+29-Mar-2020 21:34:39.206 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.206 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.207 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000001": started reading request body.
+29-Mar-2020 21:34:39.207 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000003": started reading request body.
+29-Mar-2020 21:34:39.207 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000001": done reading request body.
+29-Mar-2020 21:34:39.207 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000003": done reading request body.
+29-Mar-2020 21:34:39.208 +08:00 [DBG] Connection id "0HLUJSN9U2U8M" completed keep alive response.
+29-Mar-2020 21:34:39.208 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" completed keep alive response.
+29-Mar-2020 21:34:39.208 +08:00 [INF] Request finished in 1.9418ms 200 application/json
+29-Mar-2020 21:34:39.208 +08:00 [INF] Request finished in 2.0849ms 200 application/json
+29-Mar-2020 21:34:39.213 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.213 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.213 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000002": started reading request body.
+29-Mar-2020 21:34:39.213 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000002": started reading request body.
+29-Mar-2020 21:34:39.213 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000002": done reading request body.
+29-Mar-2020 21:34:39.213 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000002": done reading request body.
+29-Mar-2020 21:34:39.213 +08:00 [DBG] Connection id "0HLUJSN9U2U8J" completed keep alive response.
+29-Mar-2020 21:34:39.213 +08:00 [INF] Request finished in 0.6218ms 200 application/json
+29-Mar-2020 21:34:39.214 +08:00 [DBG] Connection id "0HLUJSN9U2U8L" completed keep alive response.
+29-Mar-2020 21:34:39.214 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.214 +08:00 [INF] Request finished in 4.1044ms 200 application/json
+29-Mar-2020 21:34:39.214 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000002": started reading request body.
+29-Mar-2020 21:34:39.214 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000002": done reading request body.
+29-Mar-2020 21:34:39.214 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.214 +08:00 [DBG] Connection id "0HLUJSN9U2U8K" completed keep alive response.
+29-Mar-2020 21:34:39.214 +08:00 [INF] Request finished in 0.5425ms 200 application/json
+29-Mar-2020 21:34:39.214 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.214 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000002": started reading request body.
+29-Mar-2020 21:34:39.215 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000004": started reading request body.
+29-Mar-2020 21:34:39.215 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000002": done reading request body.
+29-Mar-2020 21:34:39.215 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000004": done reading request body.
+29-Mar-2020 21:34:39.215 +08:00 [DBG] Connection id "0HLUJSN9U2U8M" completed keep alive response.
+29-Mar-2020 21:34:39.215 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" completed keep alive response.
+29-Mar-2020 21:34:39.215 +08:00 [INF] Request finished in 1.1345ms 200 application/json
+29-Mar-2020 21:34:39.215 +08:00 [INF] Request finished in 0.6642ms 200 application/json
+29-Mar-2020 21:34:39.215 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.216 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000003": started reading request body.
+29-Mar-2020 21:34:39.216 +08:00 [DBG] Connection id "0HLUJSN9U2U8J", Request id "0HLUJSN9U2U8J:00000003": done reading request body.
+29-Mar-2020 21:34:39.216 +08:00 [DBG] Connection id "0HLUJSN9U2U8J" completed keep alive response.
+29-Mar-2020 21:34:39.216 +08:00 [INF] Request finished in 0.5504ms 200 application/json
+29-Mar-2020 21:34:39.223 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.223 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000003": started reading request body.
+29-Mar-2020 21:34:39.223 +08:00 [DBG] Connection id "0HLUJSN9U2U8K", Request id "0HLUJSN9U2U8K:00000003": done reading request body.
+29-Mar-2020 21:34:39.224 +08:00 [DBG] Connection id "0HLUJSN9U2U8K" completed keep alive response.
+29-Mar-2020 21:34:39.225 +08:00 [INF] Request finished in 1.7626ms 200 application/json
+29-Mar-2020 21:34:39.225 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.225 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000003": started reading request body.
+29-Mar-2020 21:34:39.225 +08:00 [DBG] Connection id "0HLUJSN9U2U8L", Request id "0HLUJSN9U2U8L:00000003": done reading request body.
+29-Mar-2020 21:34:39.225 +08:00 [DBG] Connection id "0HLUJSN9U2U8L" completed keep alive response.
+29-Mar-2020 21:34:39.225 +08:00 [INF] Request finished in 0.4949ms 200 application/json
+29-Mar-2020 21:34:39.225 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.225 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000003": started reading request body.
+29-Mar-2020 21:34:39.226 +08:00 [DBG] Connection id "0HLUJSN9U2U8M", Request id "0HLUJSN9U2U8M:00000003": done reading request body.
+29-Mar-2020 21:34:39.227 +08:00 [DBG] Connection id "0HLUJSN9U2U8M" completed keep alive response.
+29-Mar-2020 21:34:39.228 +08:00 [INF] Request finished in 2.7361ms 200 application/json
+29-Mar-2020 21:34:39.228 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:39.228 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000005": started reading request body.
+29-Mar-2020 21:34:39.229 +08:00 [DBG] Connection id "0HLUJSN9U2U8F", Request id "0HLUJSN9U2U8F:00000005": done reading request body.
+29-Mar-2020 21:34:39.229 +08:00 [DBG] Connection id "0HLUJSN9U2U8F" completed keep alive response.
+29-Mar-2020 21:34:39.229 +08:00 [INF] Request finished in 0.5701ms 200 application/json
+29-Mar-2020 21:34:39.245 +08:00 [DBG] Starting step null on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.245 +08:00 [DBG] Starting step Task2 on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.247 +08:00 [INF] Doing Task 2
+29-Mar-2020 21:34:39.333 +08:00 [ERR] Workflow df394f07-3315-47f9-83b0-faf7f1e32197 raised error on step 4 Message: Exception of type 'System.Exception' was thrown.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at App1.Steps.Task2.Run(IStepExecutionContext context) in C:\workshop\Github\Yhd.Abp.Cap\sample\App1\Saga\Task2.cs:line 21
+   at WorkflowCore.Models.StepBody.RunAsync(IStepExecutionContext context)
+   at WorkflowCore.Services.WorkflowExecutor.ExecuteStep(WorkflowInstance workflow, WorkflowStep step, ExecutionPointer pointer, WorkflowExecutorResult wfResult, WorkflowDefinition def)
+   at WorkflowCore.Services.WorkflowExecutor.Execute(WorkflowInstance workflow)
+29-Mar-2020 21:34:39.338 +08:00 [DBG] RabbitMQ topic message [Test.App1ToApp2Text] has been published.
+29-Mar-2020 21:34:39.346 +08:00 [INF] Request finished in 1387.1983ms 200 text/html
+29-Mar-2020 21:34:39.346 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:39.389 +08:00 [INF] Request finished in 1404.7497ms 200 text/html
+29-Mar-2020 21:34:39.389 +08:00 [DBG] Connection id "0HLUJSN9U2U8I" stopped.
+29-Mar-2020 21:34:39.535 +08:00 [DBG] Starting step UndoTask2 on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.537 +08:00 [INF] Undoing Task 2
+29-Mar-2020 21:34:39.537 +08:00 [DBG] Starting step UndoTask1 on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.539 +08:00 [INF] undoing...
+29-Mar-2020 21:34:39.539 +08:00 [DBG] Starting step UndoEverything on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:39.540 +08:00 [INF] Undo everything
+29-Mar-2020 21:34:39.541 +08:00 [DBG] Starting step null on workflow df394f07-3315-47f9-83b0-faf7f1e32197
+29-Mar-2020 21:34:41.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:41.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000009": started reading request body.
+29-Mar-2020 21:34:41.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000009": done reading request body.
+29-Mar-2020 21:34:41.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:41.964 +08:00 [INF] Request finished in 1.793ms 200 application/json
+29-Mar-2020 21:34:43.616 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:43.617 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000A": started reading request body.
+29-Mar-2020 21:34:43.617 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000A": done reading request body.
+29-Mar-2020 21:34:43.618 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:43.618 +08:00 [INF] Request finished in 1.7576ms 200 application/json
+29-Mar-2020 21:34:45.178 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/cap/published/succeeded?name=&content=  
+29-Mar-2020 21:34:45.191 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:45.191 +08:00 [INF] Request finished in 12.9362ms 200 text/html
+29-Mar-2020 21:34:46.711 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/cap/published/message/1244256658489671680  
+29-Mar-2020 21:34:46.716 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:46.716 +08:00 [INF] Request finished in 5.8808ms 200 application/json
+29-Mar-2020 21:34:47.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:47.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000D": started reading request body.
+29-Mar-2020 21:34:47.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000D": done reading request body.
+29-Mar-2020 21:34:47.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:47.275 +08:00 [INF] Request finished in 2.0516ms 200 application/json
+29-Mar-2020 21:34:47.914 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:34:47.969 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:34:49.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:49.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000E": started reading request body.
+29-Mar-2020 21:34:49.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000E": done reading request body.
+29-Mar-2020 21:34:49.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:49.274 +08:00 [INF] Request finished in 1.4859ms 200 application/json
+29-Mar-2020 21:34:51.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:51.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000F": started reading request body.
+29-Mar-2020 21:34:51.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000000F": done reading request body.
+29-Mar-2020 21:34:51.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:51.274 +08:00 [INF] Request finished in 1.1941ms 200 application/json
+29-Mar-2020 21:34:53.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:53.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000010": started reading request body.
+29-Mar-2020 21:34:53.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000010": done reading request body.
+29-Mar-2020 21:34:53.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:53.274 +08:00 [INF] Request finished in 1.4295ms 200 application/json
+29-Mar-2020 21:34:55.274 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:55.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000011": started reading request body.
+29-Mar-2020 21:34:55.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000011": done reading request body.
+29-Mar-2020 21:34:55.276 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:55.277 +08:00 [INF] Request finished in 2.2233ms 200 application/json
+29-Mar-2020 21:34:57.274 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:57.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000012": started reading request body.
+29-Mar-2020 21:34:57.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000012": done reading request body.
+29-Mar-2020 21:34:57.276 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:57.276 +08:00 [INF] Request finished in 1.3643ms 200 application/json
+29-Mar-2020 21:34:57.914 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:34:57.939 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:34:59.280 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:34:59.283 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000013": started reading request body.
+29-Mar-2020 21:34:59.283 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000013": done reading request body.
+29-Mar-2020 21:34:59.285 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:34:59.286 +08:00 [INF] Request finished in 6.2028ms 200 application/json
+29-Mar-2020 21:35:01.275 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:01.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000014": started reading request body.
+29-Mar-2020 21:35:01.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000014": done reading request body.
+29-Mar-2020 21:35:01.279 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:01.280 +08:00 [INF] Request finished in 4.12ms 200 application/json
+29-Mar-2020 21:35:03.272 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:03.272 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000015": started reading request body.
+29-Mar-2020 21:35:03.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000015": done reading request body.
+29-Mar-2020 21:35:03.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:03.273 +08:00 [INF] Request finished in 0.8622ms 200 application/json
+29-Mar-2020 21:35:05.276 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:05.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000016": started reading request body.
+29-Mar-2020 21:35:05.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000016": done reading request body.
+29-Mar-2020 21:35:05.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:05.279 +08:00 [INF] Request finished in 2.4074ms 200 application/json
+29-Mar-2020 21:35:07.278 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:07.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000017": started reading request body.
+29-Mar-2020 21:35:07.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000017": done reading request body.
+29-Mar-2020 21:35:07.282 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:07.283 +08:00 [INF] Request finished in 4.5211ms 200 application/json
+29-Mar-2020 21:35:07.905 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:07.940 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:35:07.940 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:35:07.956 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:09.276 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:09.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000018": started reading request body.
+29-Mar-2020 21:35:09.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000018": done reading request body.
+29-Mar-2020 21:35:09.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:09.278 +08:00 [INF] Request finished in 2.5648ms 200 application/json
+29-Mar-2020 21:35:11.279 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:11.282 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000019": started reading request body.
+29-Mar-2020 21:35:11.282 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000019": done reading request body.
+29-Mar-2020 21:35:11.285 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:11.285 +08:00 [INF] Request finished in 5.7967ms 200 application/json
+29-Mar-2020 21:35:13.277 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:13.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001A": started reading request body.
+29-Mar-2020 21:35:13.279 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001A": done reading request body.
+29-Mar-2020 21:35:13.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:13.280 +08:00 [INF] Request finished in 3.0648ms 200 application/json
+29-Mar-2020 21:35:15.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:15.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001B": started reading request body.
+29-Mar-2020 21:35:15.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001B": done reading request body.
+29-Mar-2020 21:35:15.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:15.274 +08:00 [INF] Request finished in 1.037ms 200 application/json
+29-Mar-2020 21:35:17.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:17.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001C": started reading request body.
+29-Mar-2020 21:35:17.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001C": done reading request body.
+29-Mar-2020 21:35:17.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:17.274 +08:00 [INF] Request finished in 1.04ms 200 application/json
+29-Mar-2020 21:35:17.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:17.912 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:19.279 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:19.281 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001D": started reading request body.
+29-Mar-2020 21:35:19.281 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001D": done reading request body.
+29-Mar-2020 21:35:19.284 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:19.284 +08:00 [INF] Request finished in 4.8154ms 200 application/json
+29-Mar-2020 21:35:21.276 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:21.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001E": started reading request body.
+29-Mar-2020 21:35:21.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001E": done reading request body.
+29-Mar-2020 21:35:21.279 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:21.279 +08:00 [INF] Request finished in 3.072ms 200 application/json
+29-Mar-2020 21:35:23.278 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:23.279 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001F": started reading request body.
+29-Mar-2020 21:35:23.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000001F": done reading request body.
+29-Mar-2020 21:35:23.281 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:23.282 +08:00 [INF] Request finished in 4.0622ms 200 application/json
+29-Mar-2020 21:35:25.275 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:25.276 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000020": started reading request body.
+29-Mar-2020 21:35:25.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000020": done reading request body.
+29-Mar-2020 21:35:25.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:25.279 +08:00 [INF] Request finished in 3.1838ms 200 application/json
+29-Mar-2020 21:35:27.277 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:27.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000021": started reading request body.
+29-Mar-2020 21:35:27.279 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000021": done reading request body.
+29-Mar-2020 21:35:27.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:27.280 +08:00 [INF] Request finished in 3.0333ms 200 application/json
+29-Mar-2020 21:35:27.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:27.936 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:29.279 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:29.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000022": started reading request body.
+29-Mar-2020 21:35:29.281 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000022": done reading request body.
+29-Mar-2020 21:35:29.283 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:29.283 +08:00 [INF] Request finished in 4.6169ms 200 application/json
+29-Mar-2020 21:35:31.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:31.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000023": started reading request body.
+29-Mar-2020 21:35:31.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000023": done reading request body.
+29-Mar-2020 21:35:31.273 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:31.273 +08:00 [INF] Request finished in 0.4921ms 200 application/json
+29-Mar-2020 21:35:33.277 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:33.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000024": started reading request body.
+29-Mar-2020 21:35:33.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000024": done reading request body.
+29-Mar-2020 21:35:33.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:33.278 +08:00 [INF] Request finished in 1.8637ms 200 application/json
+29-Mar-2020 21:35:35.276 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:35.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000025": started reading request body.
+29-Mar-2020 21:35:35.277 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000025": done reading request body.
+29-Mar-2020 21:35:35.278 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:35.278 +08:00 [INF] Request finished in 1.3809ms 200 application/json
+29-Mar-2020 21:35:37.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:37.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000026": started reading request body.
+29-Mar-2020 21:35:37.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000026": done reading request body.
+29-Mar-2020 21:35:37.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:37.274 +08:00 [INF] Request finished in 0.5078ms 200 application/json
+29-Mar-2020 21:35:37.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:37.910 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:37.948 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:35:37.948 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:35:39.279 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:39.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000027": started reading request body.
+29-Mar-2020 21:35:39.280 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000027": done reading request body.
+29-Mar-2020 21:35:39.281 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:39.281 +08:00 [INF] Request finished in 1.8426ms 200 application/json
+29-Mar-2020 21:35:41.273 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:41.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000028": started reading request body.
+29-Mar-2020 21:35:41.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000028": done reading request body.
+29-Mar-2020 21:35:41.274 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:41.274 +08:00 [INF] Request finished in 0.6036ms 200 application/json
+29-Mar-2020 21:35:43.275 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:43.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000029": started reading request body.
+29-Mar-2020 21:35:43.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000029": done reading request body.
+29-Mar-2020 21:35:43.275 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:43.276 +08:00 [INF] Request finished in 1.0403ms 200 application/json
+29-Mar-2020 21:35:45.285 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:45.286 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002A": started reading request body.
+29-Mar-2020 21:35:45.286 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002A": done reading request body.
+29-Mar-2020 21:35:45.286 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:45.286 +08:00 [INF] Request finished in 1.2495ms 200 application/json
+29-Mar-2020 21:35:47.917 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:47.974 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:47.994 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:47.994 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002B": started reading request body.
+29-Mar-2020 21:35:47.994 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002B": done reading request body.
+29-Mar-2020 21:35:47.994 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:47.995 +08:00 [INF] Request finished in 0.5787ms 200 application/json
+29-Mar-2020 21:35:49.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:49.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002C": started reading request body.
+29-Mar-2020 21:35:49.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002C": done reading request body.
+29-Mar-2020 21:35:49.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:49.959 +08:00 [INF] Request finished in 0.5753ms 200 application/json
+29-Mar-2020 21:35:51.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:51.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002D": started reading request body.
+29-Mar-2020 21:35:51.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002D": done reading request body.
+29-Mar-2020 21:35:51.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:51.961 +08:00 [INF] Request finished in 1.1443ms 200 application/json
+29-Mar-2020 21:35:53.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:53.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002E": started reading request body.
+29-Mar-2020 21:35:53.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002E": done reading request body.
+29-Mar-2020 21:35:53.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:53.963 +08:00 [INF] Request finished in 1.1758ms 200 application/json
+29-Mar-2020 21:35:55.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002F": started reading request body.
+29-Mar-2020 21:35:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000002F": done reading request body.
+29-Mar-2020 21:35:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:55.959 +08:00 [INF] Request finished in 0.3783ms 200 application/json
+29-Mar-2020 21:35:57.915 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:35:57.930 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:35:57.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:57.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000030": started reading request body.
+29-Mar-2020 21:35:57.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000030": done reading request body.
+29-Mar-2020 21:35:57.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:57.962 +08:00 [INF] Request finished in 0.669ms 200 application/json
+29-Mar-2020 21:35:59.976 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:35:59.976 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000031": started reading request body.
+29-Mar-2020 21:35:59.977 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000031": done reading request body.
+29-Mar-2020 21:35:59.978 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:35:59.978 +08:00 [INF] Request finished in 2.914ms 200 application/json
+29-Mar-2020 21:36:01.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:01.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000032": started reading request body.
+29-Mar-2020 21:36:01.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000032": done reading request body.
+29-Mar-2020 21:36:01.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:01.958 +08:00 [INF] Request finished in 0.3606ms 200 application/json
+29-Mar-2020 21:36:03.965 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:03.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000033": started reading request body.
+29-Mar-2020 21:36:03.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000033": done reading request body.
+29-Mar-2020 21:36:03.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:03.966 +08:00 [INF] Request finished in 1.3379ms 200 application/json
+29-Mar-2020 21:36:05.965 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:05.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000034": started reading request body.
+29-Mar-2020 21:36:05.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000034": done reading request body.
+29-Mar-2020 21:36:05.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:05.967 +08:00 [INF] Request finished in 2.4953ms 200 application/json
+29-Mar-2020 21:36:07.917 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:07.940 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:07.955 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:36:07.955 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:36:07.972 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:07.972 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000035": started reading request body.
+29-Mar-2020 21:36:07.972 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000035": done reading request body.
+29-Mar-2020 21:36:07.973 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:07.973 +08:00 [INF] Request finished in 0.7862ms 200 application/json
+29-Mar-2020 21:36:09.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:09.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000036": started reading request body.
+29-Mar-2020 21:36:09.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000036": done reading request body.
+29-Mar-2020 21:36:09.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:09.966 +08:00 [INF] Request finished in 1.759ms 200 application/json
+29-Mar-2020 21:36:11.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:11.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000037": started reading request body.
+29-Mar-2020 21:36:11.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000037": done reading request body.
+29-Mar-2020 21:36:11.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:11.959 +08:00 [INF] Request finished in 0.4606ms 200 application/json
+29-Mar-2020 21:36:13.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:13.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000038": started reading request body.
+29-Mar-2020 21:36:13.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000038": done reading request body.
+29-Mar-2020 21:36:13.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:13.959 +08:00 [INF] Request finished in 0.4283ms 200 application/json
+29-Mar-2020 21:36:15.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:15.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000039": started reading request body.
+29-Mar-2020 21:36:15.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000039": done reading request body.
+29-Mar-2020 21:36:15.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:15.960 +08:00 [INF] Request finished in 0.3644ms 200 application/json
+29-Mar-2020 21:36:17.903 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:17.911 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:17.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003A": started reading request body.
+29-Mar-2020 21:36:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003A": done reading request body.
+29-Mar-2020 21:36:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:17.960 +08:00 [INF] Request finished in 0.4847ms 200 application/json
+29-Mar-2020 21:36:19.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:19.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003B": started reading request body.
+29-Mar-2020 21:36:19.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003B": done reading request body.
+29-Mar-2020 21:36:19.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:19.959 +08:00 [INF] Request finished in 0.4612ms 200 application/json
+29-Mar-2020 21:36:21.971 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:21.971 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003C": started reading request body.
+29-Mar-2020 21:36:21.972 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003C": done reading request body.
+29-Mar-2020 21:36:21.973 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:21.973 +08:00 [INF] Request finished in 2.0793ms 200 application/json
+29-Mar-2020 21:36:23.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:23.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003D": started reading request body.
+29-Mar-2020 21:36:23.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003D": done reading request body.
+29-Mar-2020 21:36:23.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:23.965 +08:00 [INF] Request finished in 1.3393ms 200 application/json
+29-Mar-2020 21:36:25.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:25.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003E": started reading request body.
+29-Mar-2020 21:36:25.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003E": done reading request body.
+29-Mar-2020 21:36:25.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:25.964 +08:00 [INF] Request finished in 1.5482ms 200 application/json
+29-Mar-2020 21:36:27.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:27.931 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:27.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:27.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003F": started reading request body.
+29-Mar-2020 21:36:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000003F": done reading request body.
+29-Mar-2020 21:36:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:27.959 +08:00 [INF] Request finished in 0.6306ms 200 application/json
+29-Mar-2020 21:36:29.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:29.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000040": started reading request body.
+29-Mar-2020 21:36:29.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000040": done reading request body.
+29-Mar-2020 21:36:29.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:29.963 +08:00 [INF] Request finished in 1.1896ms 200 application/json
+29-Mar-2020 21:36:31.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:31.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000041": started reading request body.
+29-Mar-2020 21:36:31.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000041": done reading request body.
+29-Mar-2020 21:36:31.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:31.965 +08:00 [INF] Request finished in 1.8042ms 200 application/json
+29-Mar-2020 21:36:33.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:33.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000042": started reading request body.
+29-Mar-2020 21:36:33.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000042": done reading request body.
+29-Mar-2020 21:36:33.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:33.965 +08:00 [INF] Request finished in 1.1591ms 200 application/json
+29-Mar-2020 21:36:35.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:35.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000043": started reading request body.
+29-Mar-2020 21:36:35.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000043": done reading request body.
+29-Mar-2020 21:36:35.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:35.961 +08:00 [INF] Request finished in 0.8543ms 200 application/json
+29-Mar-2020 21:36:37.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:37.932 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:37.964 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:36:37.964 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:36:37.965 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:37.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000044": started reading request body.
+29-Mar-2020 21:36:37.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000044": done reading request body.
+29-Mar-2020 21:36:37.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:37.966 +08:00 [INF] Request finished in 1.2191ms 200 application/json
+29-Mar-2020 21:36:39.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:39.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000045": started reading request body.
+29-Mar-2020 21:36:39.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000045": done reading request body.
+29-Mar-2020 21:36:39.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:39.960 +08:00 [INF] Request finished in 0.5105ms 200 application/json
+29-Mar-2020 21:36:41.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:41.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000046": started reading request body.
+29-Mar-2020 21:36:41.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000046": done reading request body.
+29-Mar-2020 21:36:41.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:41.960 +08:00 [INF] Request finished in 0.4527ms 200 application/json
+29-Mar-2020 21:36:43.961 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:43.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000047": started reading request body.
+29-Mar-2020 21:36:43.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000047": done reading request body.
+29-Mar-2020 21:36:43.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:43.961 +08:00 [INF] Request finished in 0.4207ms 200 application/json
+29-Mar-2020 21:36:45.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:45.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000048": started reading request body.
+29-Mar-2020 21:36:45.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000048": done reading request body.
+29-Mar-2020 21:36:45.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:45.962 +08:00 [INF] Request finished in 0.603ms 200 application/json
+29-Mar-2020 21:36:47.918 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:47.928 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:47.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:47.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000049": started reading request body.
+29-Mar-2020 21:36:47.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000049": done reading request body.
+29-Mar-2020 21:36:47.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:47.960 +08:00 [INF] Request finished in 0.4855ms 200 application/json
+29-Mar-2020 21:36:49.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:49.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004A": started reading request body.
+29-Mar-2020 21:36:49.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004A": done reading request body.
+29-Mar-2020 21:36:49.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:49.966 +08:00 [INF] Request finished in 3.0532ms 200 application/json
+29-Mar-2020 21:36:51.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:51.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004B": started reading request body.
+29-Mar-2020 21:36:51.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004B": done reading request body.
+29-Mar-2020 21:36:51.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:51.964 +08:00 [INF] Request finished in 1.2087ms 200 application/json
+29-Mar-2020 21:36:53.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:53.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004C": started reading request body.
+29-Mar-2020 21:36:53.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004C": done reading request body.
+29-Mar-2020 21:36:53.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:53.959 +08:00 [INF] Request finished in 0.6831ms 200 application/json
+29-Mar-2020 21:36:55.965 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:55.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004D": started reading request body.
+29-Mar-2020 21:36:55.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004D": done reading request body.
+29-Mar-2020 21:36:55.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:55.966 +08:00 [INF] Request finished in 1.3866ms 200 application/json
+29-Mar-2020 21:36:57.915 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:36:57.947 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:36:57.966 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:57.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004E": started reading request body.
+29-Mar-2020 21:36:57.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004E": done reading request body.
+29-Mar-2020 21:36:57.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:57.967 +08:00 [INF] Request finished in 0.7908ms 200 application/json
+29-Mar-2020 21:36:59.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:36:59.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004F": started reading request body.
+29-Mar-2020 21:36:59.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000004F": done reading request body.
+29-Mar-2020 21:36:59.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:36:59.963 +08:00 [INF] Request finished in 1.7654ms 200 application/json
+29-Mar-2020 21:37:01.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:01.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000050": started reading request body.
+29-Mar-2020 21:37:01.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000050": done reading request body.
+29-Mar-2020 21:37:01.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:01.965 +08:00 [INF] Request finished in 2.581ms 200 application/json
+29-Mar-2020 21:37:03.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000051": started reading request body.
+29-Mar-2020 21:37:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000051": done reading request body.
+29-Mar-2020 21:37:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:03.960 +08:00 [INF] Request finished in 0.6116ms 200 application/json
+29-Mar-2020 21:37:05.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:05.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000052": started reading request body.
+29-Mar-2020 21:37:05.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000052": done reading request body.
+29-Mar-2020 21:37:05.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:05.960 +08:00 [INF] Request finished in 0.5581ms 200 application/json
+29-Mar-2020 21:37:07.915 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:07.955 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:07.964 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:37:07.964 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:37:07.969 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:07.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000053": started reading request body.
+29-Mar-2020 21:37:07.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000053": done reading request body.
+29-Mar-2020 21:37:07.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:07.969 +08:00 [INF] Request finished in 0.6309ms 200 application/json
+29-Mar-2020 21:37:09.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:09.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000054": started reading request body.
+29-Mar-2020 21:37:09.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000054": done reading request body.
+29-Mar-2020 21:37:09.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:09.958 +08:00 [INF] Request finished in 0.4105ms 200 application/json
+29-Mar-2020 21:37:11.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:11.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000055": started reading request body.
+29-Mar-2020 21:37:11.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000055": done reading request body.
+29-Mar-2020 21:37:11.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:11.966 +08:00 [INF] Request finished in 3.109ms 200 application/json
+29-Mar-2020 21:37:13.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:13.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000056": started reading request body.
+29-Mar-2020 21:37:13.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000056": done reading request body.
+29-Mar-2020 21:37:13.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:13.959 +08:00 [INF] Request finished in 0.4325ms 200 application/json
+29-Mar-2020 21:37:15.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:15.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000057": started reading request body.
+29-Mar-2020 21:37:15.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000057": done reading request body.
+29-Mar-2020 21:37:15.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:15.959 +08:00 [INF] Request finished in 0.3558ms 200 application/json
+29-Mar-2020 21:37:17.905 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:17.912 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:17.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:17.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000058": started reading request body.
+29-Mar-2020 21:37:17.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000058": done reading request body.
+29-Mar-2020 21:37:17.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:17.959 +08:00 [INF] Request finished in 0.4011ms 200 application/json
+29-Mar-2020 21:37:19.961 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:19.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000059": started reading request body.
+29-Mar-2020 21:37:19.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000059": done reading request body.
+29-Mar-2020 21:37:19.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:19.962 +08:00 [INF] Request finished in 1.5018ms 200 application/json
+29-Mar-2020 21:37:21.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:21.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005A": started reading request body.
+29-Mar-2020 21:37:21.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005A": done reading request body.
+29-Mar-2020 21:37:21.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:21.963 +08:00 [INF] Request finished in 1.323ms 200 application/json
+29-Mar-2020 21:37:23.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:23.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005B": started reading request body.
+29-Mar-2020 21:37:23.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005B": done reading request body.
+29-Mar-2020 21:37:23.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:23.965 +08:00 [INF] Request finished in 2.3448ms 200 application/json
+29-Mar-2020 21:37:25.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:25.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005C": started reading request body.
+29-Mar-2020 21:37:25.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005C": done reading request body.
+29-Mar-2020 21:37:25.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:25.963 +08:00 [INF] Request finished in 1.1614ms 200 application/json
+29-Mar-2020 21:37:27.903 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:27.908 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:27.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005D": started reading request body.
+29-Mar-2020 21:37:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005D": done reading request body.
+29-Mar-2020 21:37:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:27.959 +08:00 [INF] Request finished in 0.4451ms 200 application/json
+29-Mar-2020 21:37:29.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:29.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005E": started reading request body.
+29-Mar-2020 21:37:29.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005E": done reading request body.
+29-Mar-2020 21:37:29.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:29.959 +08:00 [INF] Request finished in 0.6021ms 200 application/json
+29-Mar-2020 21:37:31.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:31.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005F": started reading request body.
+29-Mar-2020 21:37:31.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000005F": done reading request body.
+29-Mar-2020 21:37:31.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:31.959 +08:00 [INF] Request finished in 0.3583ms 200 application/json
+29-Mar-2020 21:37:33.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:33.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000060": started reading request body.
+29-Mar-2020 21:37:33.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000060": done reading request body.
+29-Mar-2020 21:37:33.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:33.964 +08:00 [INF] Request finished in 1.3411ms 200 application/json
+29-Mar-2020 21:37:35.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:35.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000061": started reading request body.
+29-Mar-2020 21:37:35.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000061": done reading request body.
+29-Mar-2020 21:37:35.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:35.965 +08:00 [INF] Request finished in 1.6085ms 200 application/json
+29-Mar-2020 21:37:37.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:37.929 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:37.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:37.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000062": started reading request body.
+29-Mar-2020 21:37:37.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000062": done reading request body.
+29-Mar-2020 21:37:37.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:37.960 +08:00 [INF] Request finished in 0.42ms 200 application/json
+29-Mar-2020 21:37:37.968 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:37:37.969 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:37:39.961 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:39.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000063": started reading request body.
+29-Mar-2020 21:37:39.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000063": done reading request body.
+29-Mar-2020 21:37:39.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:39.962 +08:00 [INF] Request finished in 0.8651ms 200 application/json
+29-Mar-2020 21:37:41.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:41.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000064": started reading request body.
+29-Mar-2020 21:37:41.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000064": done reading request body.
+29-Mar-2020 21:37:41.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:41.964 +08:00 [INF] Request finished in 1.2282ms 200 application/json
+29-Mar-2020 21:37:43.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:43.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000065": started reading request body.
+29-Mar-2020 21:37:43.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000065": done reading request body.
+29-Mar-2020 21:37:43.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:43.964 +08:00 [INF] Request finished in 1.3333ms 200 application/json
+29-Mar-2020 21:37:45.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:45.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000066": started reading request body.
+29-Mar-2020 21:37:45.962 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000066": done reading request body.
+29-Mar-2020 21:37:45.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:45.963 +08:00 [INF] Request finished in 0.8531ms 200 application/json
+29-Mar-2020 21:37:47.905 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:47.949 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:47.985 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:47.985 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000067": started reading request body.
+29-Mar-2020 21:37:47.985 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000067": done reading request body.
+29-Mar-2020 21:37:47.985 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:47.985 +08:00 [INF] Request finished in 0.4269ms 200 application/json
+29-Mar-2020 21:37:49.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:49.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000068": started reading request body.
+29-Mar-2020 21:37:49.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000068": done reading request body.
+29-Mar-2020 21:37:49.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:49.964 +08:00 [INF] Request finished in 2.3199ms 200 application/json
+29-Mar-2020 21:37:51.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:51.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000069": started reading request body.
+29-Mar-2020 21:37:51.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000069": done reading request body.
+29-Mar-2020 21:37:51.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:51.963 +08:00 [INF] Request finished in 1.2293ms 200 application/json
+29-Mar-2020 21:37:53.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:53.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006A": started reading request body.
+29-Mar-2020 21:37:53.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006A": done reading request body.
+29-Mar-2020 21:37:53.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:53.966 +08:00 [INF] Request finished in 1.6181ms 200 application/json
+29-Mar-2020 21:37:55.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006B": started reading request body.
+29-Mar-2020 21:37:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006B": done reading request body.
+29-Mar-2020 21:37:55.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:55.959 +08:00 [INF] Request finished in 0.3764ms 200 application/json
+29-Mar-2020 21:37:57.903 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:37:57.911 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:37:57.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:57.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006C": started reading request body.
+29-Mar-2020 21:37:57.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006C": done reading request body.
+29-Mar-2020 21:37:57.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:57.959 +08:00 [INF] Request finished in 0.4316ms 200 application/json
+29-Mar-2020 21:37:59.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:37:59.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006D": started reading request body.
+29-Mar-2020 21:37:59.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006D": done reading request body.
+29-Mar-2020 21:37:59.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:37:59.965 +08:00 [INF] Request finished in 1.4876ms 200 application/json
+29-Mar-2020 21:38:01.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:01.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006E": started reading request body.
+29-Mar-2020 21:38:01.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006E": done reading request body.
+29-Mar-2020 21:38:01.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:01.966 +08:00 [INF] Request finished in 1.8361ms 200 application/json
+29-Mar-2020 21:38:03.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006F": started reading request body.
+29-Mar-2020 21:38:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000006F": done reading request body.
+29-Mar-2020 21:38:03.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:03.960 +08:00 [INF] Request finished in 0.3504ms 200 application/json
+29-Mar-2020 21:38:05.961 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:05.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000070": started reading request body.
+29-Mar-2020 21:38:05.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000070": done reading request body.
+29-Mar-2020 21:38:05.961 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:05.961 +08:00 [INF] Request finished in 0.7201ms 200 application/json
+29-Mar-2020 21:38:07.903 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:38:07.908 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:38:07.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:07.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000071": started reading request body.
+29-Mar-2020 21:38:07.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000071": done reading request body.
+29-Mar-2020 21:38:07.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:07.958 +08:00 [INF] Request finished in 0.5333ms 200 application/json
+29-Mar-2020 21:38:07.977 +08:00 [DBG] Transport connection checking...
+29-Mar-2020 21:38:07.977 +08:00 [DBG] Transport connection healthy!
+29-Mar-2020 21:38:09.959 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:09.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000072": started reading request body.
+29-Mar-2020 21:38:09.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000072": done reading request body.
+29-Mar-2020 21:38:09.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:09.960 +08:00 [INF] Request finished in 0.4786ms 200 application/json
+29-Mar-2020 21:38:11.967 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:11.968 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000073": started reading request body.
+29-Mar-2020 21:38:11.968 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000073": done reading request body.
+29-Mar-2020 21:38:11.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:11.969 +08:00 [INF] Request finished in 2.324ms 200 application/json
+29-Mar-2020 21:38:13.983 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:13.983 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000074": started reading request body.
+29-Mar-2020 21:38:13.983 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000074": done reading request body.
+29-Mar-2020 21:38:13.983 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:13.983 +08:00 [INF] Request finished in 0.6411ms 200 application/json
+29-Mar-2020 21:38:15.968 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:15.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000075": started reading request body.
+29-Mar-2020 21:38:15.969 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000075": done reading request body.
+29-Mar-2020 21:38:15.970 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:15.970 +08:00 [INF] Request finished in 2.0248ms 200 application/json
+29-Mar-2020 21:38:17.915 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:38:17.921 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:38:17.960 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000076": started reading request body.
+29-Mar-2020 21:38:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000076": done reading request body.
+29-Mar-2020 21:38:17.960 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:17.960 +08:00 [INF] Request finished in 0.5461ms 200 application/json
+29-Mar-2020 21:38:19.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:19.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000077": started reading request body.
+29-Mar-2020 21:38:19.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000077": done reading request body.
+29-Mar-2020 21:38:19.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:19.965 +08:00 [INF] Request finished in 1.3066ms 200 application/json
+29-Mar-2020 21:38:21.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:21.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000078": started reading request body.
+29-Mar-2020 21:38:21.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000078": done reading request body.
+29-Mar-2020 21:38:21.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:21.966 +08:00 [INF] Request finished in 1.8131ms 200 application/json
+29-Mar-2020 21:38:23.966 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:23.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000079": started reading request body.
+29-Mar-2020 21:38:23.967 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:00000079": done reading request body.
+29-Mar-2020 21:38:23.968 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:23.968 +08:00 [INF] Request finished in 2.011ms 200 application/json
+29-Mar-2020 21:38:25.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:25.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007A": started reading request body.
+29-Mar-2020 21:38:25.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007A": done reading request body.
+29-Mar-2020 21:38:25.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:25.958 +08:00 [INF] Request finished in 0.4222ms 200 application/json
+29-Mar-2020 21:38:27.904 +08:00 [INF] Polling for runnable workflows
+29-Mar-2020 21:38:27.909 +08:00 [INF] Polling for unprocessed events
+29-Mar-2020 21:38:27.958 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:27.958 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007B": started reading request body.
+29-Mar-2020 21:38:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007B": done reading request body.
+29-Mar-2020 21:38:27.959 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:27.959 +08:00 [INF] Request finished in 0.4575ms 200 application/json
+29-Mar-2020 21:38:29.964 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:29.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007C": started reading request body.
+29-Mar-2020 21:38:29.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007C": done reading request body.
+29-Mar-2020 21:38:29.966 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:29.966 +08:00 [INF] Request finished in 2.1756ms 200 application/json
+29-Mar-2020 21:38:31.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:31.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007D": started reading request body.
+29-Mar-2020 21:38:31.963 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007D": done reading request body.
+29-Mar-2020 21:38:31.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:31.964 +08:00 [INF] Request finished in 1.3167ms 200 application/json
+29-Mar-2020 21:38:33.963 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+29-Mar-2020 21:38:33.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007E": started reading request body.
+29-Mar-2020 21:38:33.964 +08:00 [DBG] Connection id "0HLUJSN9U2U8E", Request id "0HLUJSN9U2U8E:0000007E": done reading request body.
+29-Mar-2020 21:38:33.965 +08:00 [DBG] Connection id "0HLUJSN9U2U8E" completed keep alive response.
+29-Mar-2020 21:38:33.965 +08:00 [INF] Request finished in 2.4747ms 200 application/json

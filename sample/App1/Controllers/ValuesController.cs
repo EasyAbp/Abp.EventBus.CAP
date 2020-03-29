@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
+using WorkflowCore.Interface;
 
 namespace App1.Controllers
 {
@@ -9,20 +10,18 @@ namespace App1.Controllers
     [ApiController]
     public class ValuesController : AbpController
     {
-        private readonly IApp1MessagingService _app1Message;
+        private readonly IWorkflowHost _host;
 
-        public ValuesController(IApp1MessagingService app1Message)
+        public ValuesController(IWorkflowHost workHost)
         {
-            _app1Message = app1Message;
+            _host = workHost;
         }
 
         [HttpGet]
-        public async Task<IActionResult> AppMessage()
+        public async Task<string> AppMessage()
         {
-            await _app1Message.RunAsync($"App1.Message { DateTime.Now}");
-
-            return Ok();
-        }
-
+            var workflowId = await _host.StartWorkflow("compensate-sample");
+            return workflowId;
+        }        
     }
 }
