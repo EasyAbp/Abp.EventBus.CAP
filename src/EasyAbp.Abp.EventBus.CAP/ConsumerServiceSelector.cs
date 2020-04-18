@@ -62,7 +62,7 @@ namespace EasyAbp.Abp.EventBus.Cap
         {
             var serviceTypeInfo = typeof(IDistributedEventHandler<>)
                 .MakeGenericType(eventType);
-            var method = serviceTypeInfo
+            var method = typeInfo
                 .GetMethod(
                     nameof(IDistributedEventHandler<object>.HandleEventAsync),
                     new[] { eventType }
@@ -87,8 +87,6 @@ namespace EasyAbp.Abp.EventBus.Cap
 
                 yield return InitDescriptor(attr, method, typeInfo.GetTypeInfo(), serviceTypeInfo.GetTypeInfo(), parameters);
             }
-
-
         }
 
         private static ConsumerExecutorDescriptor InitDescriptor(
