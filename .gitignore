@@ -431,3 +431,6 @@ fabric.properties
 /.idea/.idea.EasyAbp.Abp.EventBus.Cap/.idea/modules.xml
 /.idea/.idea.EasyAbp.Abp.EventBus.Cap/.idea/projectSettingsUpdater.xml
 /.idea/.idea.EasyAbp.Abp.EventBus.Cap/riderModule.iml
+/sample/App1/Logs/log20200418.txt
+/sample/App2/Logs/log20200418_001.txt
+/sample/App2/Logs/log20200418.txt
