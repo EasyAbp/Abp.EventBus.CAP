@@ -1,0 +1,258 @@
+13-May-2020 14:38:45.324 +08:00 [INF] Starting App2.WebHost.
+13-May-2020 14:38:47.401 +08:00 [DBG] Hosting starting
+13-May-2020 14:38:47.458 +08:00 [INF] User profile is available. Using 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+13-May-2020 14:38:47.526 +08:00 [DBG] RabbitMQ configuration:'HostName:localhost, Port:-1, UserName:guest, Password:guest, ExchangeName:cap.default.router'
+13-May-2020 14:38:47.591 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-0bef591e-88d1-4798-8f0e-444aed5c7107.xml'.
+13-May-2020 14:38:47.630 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-5097cf8b-9f8a-4e57-b949-718a2a81439b.xml'.
+13-May-2020 14:38:47.632 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-53e17354-b418-4384-bfa8-08935f98ffbf.xml'.
+13-May-2020 14:38:47.633 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-cf3c06b9-d825-4592-b341-ed17371e7bdf.xml'.
+13-May-2020 14:38:47.634 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-e50ab07e-2dd1-4f21-8a8d-a8d08a1d59b9.xml'.
+13-May-2020 14:38:47.634 +08:00 [DBG] Reading data from file 'C:\Users\geffzhang\AppData\Local\ASP.NET\DataProtection-Keys\key-ea74d3e8-6c97-43ae-ac5e-b4f1a9eff86a.xml'.
+13-May-2020 14:38:47.644 +08:00 [DBG] Found key "0bef591e-88d1-4798-8f0e-444aed5c7107".
+13-May-2020 14:38:47.651 +08:00 [DBG] Found key "5097cf8b-9f8a-4e57-b949-718a2a81439b".
+13-May-2020 14:38:47.651 +08:00 [DBG] Found key "53e17354-b418-4384-bfa8-08935f98ffbf".
+13-May-2020 14:38:47.651 +08:00 [DBG] Found key "cf3c06b9-d825-4592-b341-ed17371e7bdf".
+13-May-2020 14:38:47.651 +08:00 [DBG] Found key "e50ab07e-2dd1-4f21-8a8d-a8d08a1d59b9".
+13-May-2020 14:38:47.651 +08:00 [DBG] Found key "ea74d3e8-6c97-43ae-ac5e-b4f1a9eff86a".
+13-May-2020 14:38:47.658 +08:00 [DBG] Considering key "e50ab07e-2dd1-4f21-8a8d-a8d08a1d59b9" with expiration date "2020-06-14T05:07:23.2879292+00:00" as default key.
+13-May-2020 14:38:47.664 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+13-May-2020 14:38:47.665 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+13-May-2020 14:38:47.667 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+13-May-2020 14:38:47.670 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+13-May-2020 14:38:47.672 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+13-May-2020 14:38:47.674 +08:00 [DBG] Using key "e50ab07e-2dd1-4f21-8a8d-a8d08a1d59b9" as the default key.
+13-May-2020 14:38:47.674 +08:00 [DBG] Key ring with default key "e50ab07e-2dd1-4f21-8a8d-a8d08a1d59b9" was loaded during application startup.
+13-May-2020 14:38:47.676 +08:00 [DBG] ### CAP background task is starting.
+13-May-2020 14:38:47.676 +08:00 [INF] Starting the processing server.
+13-May-2020 14:38:47.681 +08:00 [DBG] Transport connection checking...
+13-May-2020 14:38:47.682 +08:00 [DBG] Transport connection healthy!
+13-May-2020 14:38:47.695 +08:00 [DBG] Collecting expired data from table: PublishedMessages
+13-May-2020 14:38:47.697 +08:00 [DBG] Collecting expired data from table: ReceivedMessages
+13-May-2020 14:38:47.707 +08:00 [INF] ### CAP started!
+13-May-2020 14:38:47.726 +08:00 [INF] Loaded ABP modules:
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+13-May-2020 14:38:47.726 +08:00 [INF] - EasyAbp.Abp.EventBus.Cap.CapModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Validation.AbpValidationAbstractionsModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Data.AbpDataModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Json.AbpJsonModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+13-May-2020 14:38:47.726 +08:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Dapper.AbpDapperModule
+13-May-2020 14:38:47.727 +08:00 [INF] - EasyAbp.Abp.EventBus.CAP.PostgreSql.CapPostgreSqlModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Minify.AbpMinifyModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Http.AbpHttpModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.UI.AbpUiModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+13-May-2020 14:38:47.727 +08:00 [INF] - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+13-May-2020 14:38:47.727 +08:00 [INF] - App2.App2Module
+13-May-2020 14:38:47.935 +08:00 [INF] RabbitMQ consumer registered. --> amq.ctag-EOshiY8-_zCk4Yh4M3ZV2g
+13-May-2020 14:38:48.467 +08:00 [INF] Initialized all ABP modules.
+13-May-2020 14:38:48.497 +08:00 [DBG] Loaded hosting startup assembly App2
+13-May-2020 14:38:48.498 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+13-May-2020 14:38:48.498 +08:00 [INF] Hosting environment: Development
+13-May-2020 14:38:48.498 +08:00 [INF] Content root path: D:\workshop\Github\Abp.EventBus.CAP\sample\App2
+13-May-2020 14:38:48.498 +08:00 [DBG] Hosting started
+13-May-2020 14:38:48.545 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/  
+13-May-2020 14:38:48.547 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+13-May-2020 14:38:48.553 +08:00 [DBG] The request path / does not match a supported file type
+13-May-2020 14:38:48.584 +08:00 [DBG] 1 candidate(s) found for the request path '/'
+13-May-2020 14:38:48.586 +08:00 [DBG] Endpoint 'App2.Controllers.HomeController.Index (App2)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/'
+13-May-2020 14:38:48.587 +08:00 [DBG] Request matched endpoint 'App2.Controllers.HomeController.Index (App2)'
+13-May-2020 14:38:48.623 +08:00 [DBG] Static files was skipped as the request already matched an endpoint.
+13-May-2020 14:38:48.623 +08:00 [INF] Executing endpoint 'App2.Controllers.HomeController.Index (App2)'
+13-May-2020 14:38:48.631 +08:00 [DBG] Registered model binder providers, in the following order: ["Volo.Abp.AspNetCore.Mvc.ModelBinding.AbpExtraPropertiesDictionaryModelBinderProvider","Volo.Abp.AspNetCore.Mvc.ModelBinding.AbpDateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+13-May-2020 14:38:48.705 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller App2.Controllers.HomeController (App2).
+13-May-2020 14:38:48.706 +08:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+13-May-2020 14:38:48.706 +08:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+13-May-2020 14:38:48.706 +08:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Volo.Abp.AspNetCore.Mvc.Auditing.AbpAuditActionFilter","Volo.Abp.AspNetCore.Mvc.Response.AbpNoContentActionFilter","Volo.Abp.AspNetCore.Mvc.Features.AbpFeatureActionFilter","Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter","Volo.Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter"]
+13-May-2020 14:38:48.706 +08:00 [DBG] Execution plan of exception filters (in the following order): ["Volo.Abp.AspNetCore.Mvc.ExceptionHandling.AbpExceptionFilter"]
+13-May-2020 14:38:48.706 +08:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+13-May-2020 14:38:48.707 +08:00 [DBG] Executing controller factory for controller App2.Controllers.HomeController (App2)
+13-May-2020 14:38:48.708 +08:00 [DBG] Executed controller factory for controller App2.Controllers.HomeController (App2)
+13-May-2020 14:38:48.754 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+13-May-2020 14:38:48.757 +08:00 [INF] Executed action App2.Controllers.HomeController.Index (App2) in 48.0463ms
+13-May-2020 14:38:48.758 +08:00 [INF] Executed endpoint 'App2.Controllers.HomeController.Index (App2)'
+13-May-2020 14:38:48.759 +08:00 [INF] HTTP GET / responded 302 in 204.8473 ms
+13-May-2020 14:38:48.784 +08:00 [DBG] Connection ID "18374686498462105601" disconnecting.
+13-May-2020 14:38:48.786 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger  
+13-May-2020 14:38:48.787 +08:00 [DBG] The request path /swagger does not match a supported file type
+13-May-2020 14:38:48.794 +08:00 [INF] Request finished in 247.5356ms 302 
+13-May-2020 14:38:48.794 +08:00 [DBG] No candidates found for the request path '/swagger'
+13-May-2020 14:38:48.794 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:48.798 +08:00 [INF] HTTP GET /swagger responded 301 in 10.5829 ms
+13-May-2020 14:38:48.798 +08:00 [INF] Request finished in 11.5523ms 301 
+13-May-2020 14:38:48.799 +08:00 [DBG] Connection ID "18230571318976184321" disconnecting.
+13-May-2020 14:38:48.806 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/index.html  
+13-May-2020 14:38:48.822 +08:00 [DBG] The request path /swagger/index.html does not match an existing file
+13-May-2020 14:38:48.822 +08:00 [DBG] No candidates found for the request path '/swagger/index.html'
+13-May-2020 14:38:48.822 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:48.867 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 45.3219 ms
+13-May-2020 14:38:48.869 +08:00 [INF] Request finished in 63.0169ms 200 text/html;charset=utf-8
+13-May-2020 14:38:48.885 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/swagger-ui.css  
+13-May-2020 14:38:48.885 +08:00 [DBG] The request path /swagger/swagger-ui.css does not match an existing file
+13-May-2020 14:38:48.885 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/swagger-ui-bundle.js  
+13-May-2020 14:38:48.885 +08:00 [DBG] The request path /swagger/swagger-ui-bundle.js does not match an existing file
+13-May-2020 14:38:48.886 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/swagger-ui-standalone-preset.js  
+13-May-2020 14:38:48.886 +08:00 [DBG] The request path /swagger/swagger-ui-standalone-preset.js does not match an existing file
+13-May-2020 14:38:48.886 +08:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+13-May-2020 14:38:48.886 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:48.886 +08:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+13-May-2020 14:38:48.886 +08:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+13-May-2020 14:38:48.886 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:48.886 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:48.911 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+13-May-2020 14:38:48.911 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+13-May-2020 14:38:48.913 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+13-May-2020 14:38:48.917 +08:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 31.62 ms
+13-May-2020 14:38:48.917 +08:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 31.6998 ms
+13-May-2020 14:38:48.917 +08:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 31.3835 ms
+13-May-2020 14:38:48.920 +08:00 [INF] Request finished in 35.0584ms 200 text/css
+13-May-2020 14:38:48.920 +08:00 [INF] Request finished in 34.9172ms 200 application/javascript
+13-May-2020 14:38:48.920 +08:00 [INF] Request finished in 34.7337ms 200 application/javascript
+13-May-2020 14:38:49.093 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/v1/swagger.json  
+13-May-2020 14:38:49.093 +08:00 [DBG] The request path /swagger/v1/swagger.json does not match an existing file
+13-May-2020 14:38:49.093 +08:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+13-May-2020 14:38:49.093 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:49.129 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/swagger/favicon-32x32.png  
+13-May-2020 14:38:49.129 +08:00 [DBG] The request path /swagger/favicon-32x32.png does not match an existing file
+13-May-2020 14:38:49.129 +08:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+13-May-2020 14:38:49.129 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:38:49.130 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+13-May-2020 14:38:49.130 +08:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 0.8573 ms
+13-May-2020 14:38:49.130 +08:00 [INF] Request finished in 1.1896ms 200 image/png
+13-May-2020 14:38:49.201 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 107.7517 ms
+13-May-2020 14:38:49.201 +08:00 [INF] Request finished in 108.1249ms 200 application/json;charset=utf-8
+13-May-2020 14:39:17.684 +08:00 [DBG] Transport connection checking...
+13-May-2020 14:39:17.684 +08:00 [DBG] Transport connection healthy!
+13-May-2020 14:39:19.896 +08:00 [DBG] Received message. id:1260459593089597440, name: Test.App1ToApp2Text
+13-May-2020 14:39:20.342 +08:00 [DBG] Executing subscriber method : HandleEventAsync
+13-May-2020 14:39:20.356 +08:00 [DBG] Received message. id:1260459594633101312, name: Test.App1ToApp2Text
+13-May-2020 14:39:20.365 +08:00 [INF] ************************ INCOMING MESSAGE ****************************
+13-May-2020 14:39:20.365 +08:00 [INF] App1.Message 2020/5/13 14:39:19
+13-May-2020 14:39:20.365 +08:00 [INF] **********************************************************************
+13-May-2020 14:39:20.388 +08:00 [DBG] Consumer executed. Took: 50.0164 ms.
+13-May-2020 14:39:20.390 +08:00 [DBG] Executing subscriber method : HandleEventAsync
+13-May-2020 14:39:20.390 +08:00 [INF] ************************ INCOMING MESSAGE ****************************
+13-May-2020 14:39:20.390 +08:00 [INF] App1.Message 2020/5/13 14:39:20
+13-May-2020 14:39:20.390 +08:00 [INF] **********************************************************************
+13-May-2020 14:39:20.396 +08:00 [DBG] Consumer executed. Took: 6.6992 ms.
+13-May-2020 14:39:20.405 +08:00 [DBG] RabbitMQ topic message [Test.App2TextReceived] has been published.
+13-May-2020 14:39:20.408 +08:00 [DBG] RabbitMQ topic message [Test.App2TextReceived] has been published.
+13-May-2020 14:39:20.959 +08:00 [DBG] Received message. id:1260459597703331840, name: Test.App1ToApp2Text
+13-May-2020 14:39:20.960 +08:00 [DBG] Executing subscriber method : HandleEventAsync
+13-May-2020 14:39:20.961 +08:00 [INF] ************************ INCOMING MESSAGE ****************************
+13-May-2020 14:39:20.962 +08:00 [INF] App1.Message 2020/5/13 14:39:20
+13-May-2020 14:39:20.962 +08:00 [INF] **********************************************************************
+13-May-2020 14:39:20.964 +08:00 [DBG] Consumer executed. Took: 3.6154 ms.
+13-May-2020 14:39:20.966 +08:00 [DBG] RabbitMQ topic message [Test.App2TextReceived] has been published.
+13-May-2020 14:39:22.598 +08:00 [DBG] Received message. id:1260459604577796096, name: Test.App1ToApp2Text
+13-May-2020 14:39:22.600 +08:00 [DBG] Executing subscriber method : HandleEventAsync
+13-May-2020 14:39:22.601 +08:00 [INF] ************************ INCOMING MESSAGE ****************************
+13-May-2020 14:39:22.601 +08:00 [INF] App1.Message 2020/5/13 14:39:22
+13-May-2020 14:39:22.601 +08:00 [INF] **********************************************************************
+13-May-2020 14:39:22.603 +08:00 [DBG] Consumer executed. Took: 3.3847 ms.
+13-May-2020 14:39:22.604 +08:00 [DBG] RabbitMQ topic message [Test.App2TextReceived] has been published.
+13-May-2020 14:39:47.695 +08:00 [DBG] Transport connection checking...
+13-May-2020 14:39:47.695 +08:00 [DBG] Transport connection healthy!
+13-May-2020 14:40:05.160 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap  
+13-May-2020 14:40:05.223 +08:00 [INF] Request finished in 62.5287ms 200 text/html
+13-May-2020 14:40:05.242 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/js303  
+13-May-2020 14:40:05.242 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/css303  
+13-May-2020 14:40:05.280 +08:00 [INF] Request finished in 37.5165ms 200 text/css
+13-May-2020 14:40:05.294 +08:00 [INF] Request finished in 51.9882ms 200 application/javascript
+13-May-2020 14:40:05.319 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/fonts/glyphicons-halflings-regular/woff2  
+13-May-2020 14:40:05.321 +08:00 [INF] Request finished in 1.3568ms 200 font/woff2
+13-May-2020 14:40:05.394 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/favicon.ico  
+13-May-2020 14:40:05.394 +08:00 [DBG] The request path /favicon.ico does not match an existing file
+13-May-2020 14:40:05.394 +08:00 [DBG] No candidates found for the request path '/favicon.ico'
+13-May-2020 14:40:05.394 +08:00 [DBG] Request did not match any endpoints
+13-May-2020 14:40:05.394 +08:00 [DBG] The request path  does not match the path filter
+13-May-2020 14:40:05.394 +08:00 [INF] HTTP GET /favicon.ico responded 404 in 0.7104 ms
+13-May-2020 14:40:05.395 +08:00 [INF] Request finished in 1.629ms 404 
+13-May-2020 14:40:07.386 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 312
+13-May-2020 14:40:07.408 +08:00 [INF] Request finished in 21.8599ms 200 application/json
+13-May-2020 14:40:07.970 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/subscribers  
+13-May-2020 14:40:07.977 +08:00 [INF] Request finished in 7.996ms 200 text/html
+13-May-2020 14:40:08.943 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/received/succeeded  
+13-May-2020 14:40:08.960 +08:00 [INF] Request finished in 17.1175ms 200 text/html
+13-May-2020 14:40:09.481 +08:00 [INF] Request starting HTTP/2.0 GET https://localhost:44381/cap/published/succeeded  
+13-May-2020 14:40:09.488 +08:00 [INF] Request finished in 7.4605ms 200 text/html
+13-May-2020 14:40:11.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:11.529 +08:00 [INF] Request finished in 2.0893ms 200 application/json
+13-May-2020 14:40:13.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:13.529 +08:00 [INF] Request finished in 2.8479ms 200 application/json
+13-May-2020 14:40:15.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:15.529 +08:00 [INF] Request finished in 2.11ms 200 application/json
+13-May-2020 14:40:17.533 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:17.537 +08:00 [INF] Request finished in 4.0508ms 200 application/json
+13-May-2020 14:40:17.697 +08:00 [DBG] Transport connection checking...
+13-May-2020 14:40:17.697 +08:00 [DBG] Transport connection healthy!
+13-May-2020 14:40:19.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:19.528 +08:00 [INF] Request finished in 1.7073ms 200 application/json
+13-May-2020 14:40:21.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:21.529 +08:00 [INF] Request finished in 2.476ms 200 application/json
+13-May-2020 14:40:23.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:23.529 +08:00 [INF] Request finished in 1.5258ms 200 application/json
+13-May-2020 14:40:25.536 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:25.540 +08:00 [INF] Request finished in 4.1174ms 200 application/json
+13-May-2020 14:40:27.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:27.528 +08:00 [INF] Request finished in 1.6533ms 200 application/json
+13-May-2020 14:40:29.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:29.527 +08:00 [INF] Request finished in 1.3126ms 200 application/json
+13-May-2020 14:40:31.529 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:31.532 +08:00 [INF] Request finished in 3.0463ms 200 application/json
+13-May-2020 14:40:33.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:33.527 +08:00 [INF] Request finished in 1.1289ms 200 application/json
+13-May-2020 14:40:35.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:35.527 +08:00 [INF] Request finished in 1.2137ms 200 application/json
+13-May-2020 14:40:37.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:37.529 +08:00 [INF] Request finished in 1.4926ms 200 application/json
+13-May-2020 14:40:39.528 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:39.530 +08:00 [INF] Request finished in 1.4373ms 200 application/json
+13-May-2020 14:40:41.529 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:41.530 +08:00 [INF] Request finished in 1.0456ms 200 application/json
+13-May-2020 14:40:43.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:43.527 +08:00 [INF] Request finished in 1.0347ms 200 application/json
+13-May-2020 14:40:45.534 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:45.536 +08:00 [INF] Request finished in 2.192ms 200 application/json
+13-May-2020 14:40:47.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:47.527 +08:00 [INF] Request finished in 0.8674ms 200 application/json
+13-May-2020 14:40:47.710 +08:00 [DBG] Transport connection checking...
+13-May-2020 14:40:47.710 +08:00 [DBG] Transport connection healthy!
+13-May-2020 14:40:49.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:49.527 +08:00 [INF] Request finished in 1.1454ms 200 application/json
+13-May-2020 14:40:51.527 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:51.528 +08:00 [INF] Request finished in 0.8968ms 200 application/json
+13-May-2020 14:40:53.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:53.527 +08:00 [INF] Request finished in 0.8431ms 200 application/json
+13-May-2020 14:40:55.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:55.527 +08:00 [INF] Request finished in 0.843ms 200 application/json
+13-May-2020 14:40:57.525 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:57.527 +08:00 [INF] Request finished in 1.256ms 200 application/json
+13-May-2020 14:40:59.526 +08:00 [INF] Request starting HTTP/2.0 POST https://localhost:44381/cap/stats application/x-www-form-urlencoded; charset=UTF-8 274
+13-May-2020 14:40:59.527 +08:00 [INF] Request finished in 0.991ms 200 application/json
