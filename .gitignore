@@ -437,3 +437,4 @@ fabric.properties
 sample/App1/Logs/log20200426.txt
 sample/App2/Logs/log20200426.txt
 /sample/App1/Logs/log20200513.txt
+*.txt

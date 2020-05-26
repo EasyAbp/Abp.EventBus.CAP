@@ -44,15 +44,7 @@ namespace DotNetCore.CAP
             }
 
             var transactionKey = ((SqlConnection) dbTransaction.Connection).ClientConnectionId;
-            // if (_diagnosticProcessor.BufferList.TryGetValue(transactionKey, out var list))
-            // {
-            //     list.Add(msg);
-            // }
-            // else
-            // {
-            //     var msgList = new List<MediumMessage>(1) {msg};
-            //     _diagnosticProcessor.BufferList.TryAdd(transactionKey, msgList);
-            // }
+
         }
 
         public override void Commit()

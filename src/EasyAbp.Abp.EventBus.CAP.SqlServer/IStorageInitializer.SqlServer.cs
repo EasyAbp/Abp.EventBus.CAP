@@ -48,10 +48,9 @@ namespace DotNetCore.CAP.SqlServer
 
             var sql = CreateDbTablesScript(_options.Value.Schema);
             var connection = this.DbConnection;
-            //await using (var connection = new SqlConnection(_options.Value.ConnectionString))
-            //{
-                await connection.ExecuteAsync(sql, transaction: DbTransaction);
-            //}
+
+            await connection.ExecuteAsync(sql, transaction: DbTransaction);
+        
 
             _logger.LogDebug("Ensuring all create database tables script are applied.");
         }

@@ -48,7 +48,6 @@ namespace DotNetCore.CAP.SqlServer
         {
             var sql =
                 $"UPDATE {_pubName} SET Retries=@Retries,ExpiresAt=@ExpiresAt,StatusName=@StatusName WHERE Id=@Id";
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             await connection.ExecuteAsync(sql, new
             {
@@ -63,7 +62,6 @@ namespace DotNetCore.CAP.SqlServer
         {
             var sql =
                 $"UPDATE {_recName} SET Retries=@Retries,ExpiresAt=@ExpiresAt,StatusName=@StatusName WHERE Id=@Id";
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             await connection.ExecuteAsync(sql, new
             {
@@ -102,7 +100,6 @@ namespace DotNetCore.CAP.SqlServer
 
             if (dbTransaction == null)
             {
-                // using var connection = new SqlConnection(_options.Value.ConnectionString);
                 var connection = this.DbConnection;
                 connection.Execute(sql, po, DbTransaction);
             }
@@ -125,7 +122,6 @@ namespace DotNetCore.CAP.SqlServer
                 $"INSERT INTO {_recName}([Id],[Version],[Name],[Group],[Content],[Retries],[Added],[ExpiresAt],[StatusName])" +
                 $"VALUES(@Id,'{_capOptions.Value.Version}',@Name,@Group,@Content,@Retries,@Added,@ExpiresAt,@StatusName);";
 
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             connection.Execute(sql, new
             {
@@ -155,7 +151,6 @@ namespace DotNetCore.CAP.SqlServer
                 Retries = 0
             };
             var content = StringSerializer.Serialize(mdMessage.Origin);
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             connection.Execute(sql, new
             {
@@ -174,7 +169,6 @@ namespace DotNetCore.CAP.SqlServer
         public async Task<int> DeleteExpiresAsync(string table, DateTime timeout, int batchCount = 1000,
             CancellationToken token = default)
         {
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             return await connection.ExecuteAsync(
                 $"DELETE TOP (@batchCount) FROM {table} WITH (readpast) WHERE ExpiresAt < @timeout;",
@@ -188,7 +182,6 @@ namespace DotNetCore.CAP.SqlServer
                       $"AND Version='{_capOptions.Value.Version}' AND Added<'{fourMinAgo}' AND (StatusName = '{StatusName.Failed}' OR StatusName = '{StatusName.Scheduled}')";
 
             var result = new List<MediumMessage>();
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             var reader = await connection.ExecuteReaderAsync(sql);
             while (reader.Read())
@@ -214,7 +207,6 @@ namespace DotNetCore.CAP.SqlServer
 
             var result = new List<MediumMessage>();
 
-            // using var connection = new SqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             var reader = await connection.ExecuteReaderAsync(sql);
             while (reader.Read())

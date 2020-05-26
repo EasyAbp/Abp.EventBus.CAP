@@ -44,8 +44,6 @@ namespace DotNetCore.CAP.MySql
 
         public async Task ChangePublishStateAsync(MediumMessage message, StatusName state)
         {
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
-
             var connection = this.DbConnection;
 
             var sql = $"UPDATE `{_initializer.GetPublishedTableName()}` SET `Retries` = @Retries,`ExpiresAt` = @ExpiresAt,`StatusName`=@StatusName WHERE `Id`=@Id;";
@@ -61,7 +59,6 @@ namespace DotNetCore.CAP.MySql
 
         public async Task ChangeReceiveStateAsync(MediumMessage message, StatusName state)
         {
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
 
             var sql = $"UPDATE `{_initializer.GetReceivedTableName()}` SET `Retries` = @Retries,`ExpiresAt` = @ExpiresAt,`StatusName`=@StatusName WHERE `Id`=@Id;";
@@ -103,7 +100,6 @@ namespace DotNetCore.CAP.MySql
             if (dbTransaction == null)
             {
                 var connection = this.DbConnection;
-                //using var connection = new MySqlConnection(_options.Value.ConnectionString);
                 connection.Execute(sql, po, transaction: DbTransaction);
             }
             else
@@ -126,7 +122,6 @@ namespace DotNetCore.CAP.MySql
             var sql = $@"INSERT INTO `{_initializer.GetReceivedTableName()}`(`Id`,`Version`,`Name`,`Group`,`Content`,`Retries`,`Added`,`ExpiresAt`,`StatusName`) VALUES(@Id,'{_options.Value.Version}',@Name,@Group,@Content,@Retries,@Added,@ExpiresAt,@StatusName);";
            
             var connection = this.DbConnection;
-            //using var connection = new MySqlConnection(_options.Value.ConnectionString);
             connection.Execute(sql, new
             {
                 Id = SnowflakeId.Default().NextId().ToString(),
@@ -153,7 +148,6 @@ namespace DotNetCore.CAP.MySql
                 Retries = 0
             };
             var content = StringSerializer.Serialize(mdMessage.Origin);
-            //using var connection = new MySqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             connection.Execute(sql, new
             {
@@ -171,7 +165,6 @@ namespace DotNetCore.CAP.MySql
 
         public async Task<int> DeleteExpiresAsync(string table, DateTime timeout, int batchCount = 1000, CancellationToken token = default)
         {
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
 
             return await connection.ExecuteAsync(
@@ -187,7 +180,6 @@ namespace DotNetCore.CAP.MySql
             var result = new List<MediumMessage>();
             var connection = this.DbConnection;
 
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
             var reader = await connection.ExecuteReaderAsync(sql, transaction: DbTransaction);
             while (reader.Read())
             {

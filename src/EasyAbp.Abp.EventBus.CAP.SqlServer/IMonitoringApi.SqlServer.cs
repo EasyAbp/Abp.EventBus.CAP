@@ -127,7 +127,6 @@ select count(Id) from {_recName} with (nolock) where StatusName = N'Failed';";
         public async Task<MediumMessage> GetPublishedMessageAsync(long id)
         {
             var sql = $@"SELECT * FROM {_pubName} WITH (readpast) WHERE Id={id}";
-            // using var connection = new SqlConnection(_options.ConnectionString);
             var connection = this.DbConnection;
             return await connection.QueryFirstOrDefaultAsync<MediumMessage>(sql, DbTransaction);
         }
@@ -135,7 +134,6 @@ select count(Id) from {_recName} with (nolock) where StatusName = N'Failed';";
         public async Task<MediumMessage> GetReceivedMessageAsync(long id)
         {
             var sql = $@"SELECT * FROM {_recName} WITH (readpast) WHERE Id={id}";
-            // using var connection = new SqlConnection(_options.ConnectionString);
             var connection = this.DbConnection;
             return await connection.QueryFirstOrDefaultAsync<MediumMessage>(sql, DbTransaction);
         }
@@ -151,7 +149,6 @@ select count(Id) from {_recName} with (nolock) where StatusName = N'Failed';";
 
         private T UseConnection<T>(Func<IDbConnection, T> action)
         {
-            // return action(new SqlConnection(_options.ConnectionString));
             return action(this.DbConnection);
         }
 

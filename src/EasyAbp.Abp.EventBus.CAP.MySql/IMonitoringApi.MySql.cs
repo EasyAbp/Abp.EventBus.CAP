@@ -201,7 +201,6 @@ select aggr.* from (
         {
             var sql = $@"SELECT * FROM `{_pubName}` WHERE `Id`={id};";
 
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
             var connection = this.DbConnection;
             return await connection.QueryFirstOrDefaultAsync<MediumMessage>(sql, transaction: DbTransaction);
         }
@@ -210,7 +209,6 @@ select aggr.* from (
         {
             var sql = $@"SELECT * FROM `{_recName}` WHERE Id={id};";
             var connection = this.DbConnection;
-            //await using var connection = new MySqlConnection(_options.Value.ConnectionString);
             return await connection.QueryFirstOrDefaultAsync<MediumMessage>(sql);
         }
     }
