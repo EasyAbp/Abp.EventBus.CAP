@@ -102,7 +102,7 @@ namespace App1
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "App1 API");
             });
-            app.UseMvcWithDefaultRouteAndArea();
+            app.UseConfiguredEndpoints();
         }
 
         public override void OnPostApplicationInitialization(ApplicationInitializationContext context)

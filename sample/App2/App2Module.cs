@@ -89,7 +89,7 @@ namespace App2
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "App2 API");
             });
-            app.UseMvcWithDefaultRouteAndArea();
+            app.UseConfiguredEndpoints();
         }
     }
 }
