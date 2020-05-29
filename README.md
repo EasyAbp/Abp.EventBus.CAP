@@ -1,6 +1,11 @@
+# Abp.EventBus.CAP
+
+[![NuGet](https://img.shields.io/nuget/v/EasyAbp.Abp.EventBus.CAP.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.EventBus.CAP)
+[![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.Abp.EventBus.CAP.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.EventBus.CAP)
+
 This is a repository integrated [CAP](https://github.com/dotnetcore/CAP/) with [ABP](https://github.com/abpframework/abp)
 
-### EventBus
+## EventBus
 
 ```
  public override void ConfigureServices(ServiceConfigurationContext context)
