@@ -37,7 +37,7 @@ namespace App2
             {
                 /* The main point to change your DBMS.
                  * See also VoucherManagementMigrationsDbContextFactory for EF Core tooling. */
-                options.UsePostgreSql();
+                options.UseNpgsql();
             });
 
             context.AddCapEventBus(capOptions =>
