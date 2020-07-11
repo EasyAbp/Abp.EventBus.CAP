@@ -5,36 +5,33 @@ on:
       - master # Default release branch
 jobs:
   publish:
-    name: list on nuget
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      # Publish
-      - name: publish EasyAbp.Abp.EventBus.CAP.dll
-        uses: brandedoutcast/publish-nuget@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
         with:
-          PROJECT_FILE_PATH: src/EasyAbp.Abp.EventBus.CAP/EasyAbp.Abp.EventBus.CAP.csproj
-          VERSION_FILE_PATH: common.props
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          dotnet-version: 3.1.200
+          source-url: https://nuget.pkg.github.com/EasyAbp/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - name: publish EasyAbp.Abp.EventBus.CAP.MySql.dll
-        uses: brandedoutcast/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: src/EasyAbp.Abp.EventBus.CAP.MySql/EasyAbp.Abp.EventBus.CAP.MySql.csproj
-          VERSION_FILE_PATH: common.props
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: dotnet build
+        run: dotnet build -c Release
 
-      - name: publish EasyAbp.Abp.EventBus.CAP.PostgreSql.dll
-        uses: brandedoutcast/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: src/EasyAbp.Abp.EventBus.CAP.PostgreSql/EasyAbp.Abp.EventBus.CAP.PostgreSql.csproj
-          VERSION_FILE_PATH: common.props
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: dotnet pack
+        run: dotnet pack -c Release --no-build -o dest
 
-      - name: publish EasyAbp.Abp.EventBus.CAP.SqlServer.dll
-        uses: brandedoutcast/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: src/EasyAbp.Abp.EventBus.CAP.SqlServer/EasyAbp.Abp.EventBus.CAP.SqlServer.csproj
-          VERSION_FILE_PATH: common.props
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: remove unused packages
+        run: |
+          cd dest
+          ls | grep -v EasyAbp. | xargs rm -f
+          ls | grep HttpApi.Client.ConsoleTestApp | xargs rm -f
+          ls
+
+      - name: dotnet nuget push to GitHub
+        run: dotnet nuget push ./dest/**/*.nupkg --skip-duplicate --no-symbols true
+
+      - name: dotnet nuget push to NuGet
+        run: dotnet nuget push ./dest/**/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true

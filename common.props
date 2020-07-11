@@ -1,11 +1,12 @@
 <Project>
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <Version>3.0.3</Version>
+    <Version>3.0.4</Version>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>EasyAbp Team</Authors>
     <Description>ABP vNext framework CAP EventBus module.</Description>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/58311641?s=128</PackageIconUrl>
     <PackageProjectUrl>https://github.com/EasyAbp/Abp.EventBus.CAP</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EasyAbp/Abp.EventBus.CAP</RepositoryUrl>
     <PackageTags>abp module easyabp eventbus event cap</PackageTags>
