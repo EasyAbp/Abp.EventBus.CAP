@@ -33,4 +33,4 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
 
 ## Usage
 
-See the [ABP distributed event bus document](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus).
+See the [ABP distributed event bus document](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus) and the [CAP document](https://cap.dotnetcore.xyz/user-guide/en/getting-started/quick-start).
