@@ -16,8 +16,8 @@ using EasyAbp.Abp.EventBus.CAP.PostgreSql;
 namespace App2
 {
     [DependsOn(
-        typeof(CapModule),
-        typeof(CapPostgreSqlModule),
+        typeof(AbpEventBusCapModule),
+        typeof(AbpEventBusCapPostgreSqlModule),
         typeof(AbpAutofacModule),
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAspNetCoreSerilogModule))]

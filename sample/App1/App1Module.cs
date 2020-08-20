@@ -18,8 +18,8 @@ using App1.Saga;
 namespace App1
 {
     [DependsOn(
-        typeof(CapModule),
-        typeof(CapMysqlModule),
+        typeof(AbpEventBusCapModule),
+        typeof(AbpEventBusCapMysqlModule),
         typeof(AbpAutofacModule),
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAspNetCoreSerilogModule))]

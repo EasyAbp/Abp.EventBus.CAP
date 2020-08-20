@@ -8,7 +8,7 @@ namespace EasyAbp.Abp.EventBus.CAP.SqlServer
         typeof(AbpEntityFrameworkCoreSqlServerModule),
         typeof(AbpDapperModule)
     )]
-    public class CapSqlServerModule: AbpModule
+    public class AbpEventBusCapSqlServerModule: AbpModule
     {
         
     }

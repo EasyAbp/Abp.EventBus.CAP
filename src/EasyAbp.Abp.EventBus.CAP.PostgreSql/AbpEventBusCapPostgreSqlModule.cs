@@ -9,7 +9,7 @@ namespace EasyAbp.Abp.EventBus.CAP.PostgreSql
        typeof(AbpEntityFrameworkCorePostgreSqlModule),
        typeof(AbpDapperModule)
        )]
-    public class CapPostgreSqlModule : AbpModule
+    public class AbpEventBusCapPostgreSqlModule : AbpModule
     {
 
     }
