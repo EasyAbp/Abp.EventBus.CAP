@@ -1,4 +1,7 @@
-﻿using DotNetCore.CAP;
+﻿// Copyright (c) Easyabp Community. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+using DotNetCore.CAP;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
