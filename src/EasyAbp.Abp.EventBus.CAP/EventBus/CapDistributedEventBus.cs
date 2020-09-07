@@ -13,6 +13,7 @@ using Volo.Abp;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
+using Volo.Abp.MultiTenancy;
 using Volo.Abp.Threading;
 
 namespace EasyAbp.Abp.EventBus.Cap
@@ -30,7 +31,9 @@ namespace EasyAbp.Abp.EventBus.Cap
 
         public CapDistributedEventBus(IServiceScopeFactory serviceScopeFactory,
             IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions,
-            ICapPublisher capPublisher) : base(serviceScopeFactory)
+            ICapPublisher capPublisher, 
+            ICurrentTenant currentTenant)
+            : base(serviceScopeFactory, currentTenant)
         {
             CapPublisher = capPublisher;
             AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
