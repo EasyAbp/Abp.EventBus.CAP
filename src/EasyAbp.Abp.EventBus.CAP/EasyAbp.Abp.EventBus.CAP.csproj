@@ -9,8 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="3.1.1" />
-    <PackageReference Include="Volo.Abp.Core" Version="3.3.0" />
-    <PackageReference Include="Volo.Abp.EventBus" Version="3.3.0" />
+    <PackageReference Include="Volo.Abp.Core" Version="4.0.2" />
+    <PackageReference Include="Volo.Abp.EventBus" Version="4.0.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,12 +13,9 @@ using DotNetCore.CAP.Monitoring;
 using DotNetCore.CAP.Persistence;
 using DotNetCore.CAP.Serialization;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using MySql.Data.MySqlClient;
 using Volo.Abp.Domain.Repositories.Dapper;
 using Volo.Abp.EntityFrameworkCore;
-using Volo.Abp.Uow;
 
 namespace DotNetCore.CAP.MySql
 {

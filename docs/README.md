@@ -8,14 +8,14 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
 
 ## Installation
 
-1. Install the following NuGet packages. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/How-To.md#add-nuget-packages))
+1. Install the following NuGet packages. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/docs/How-To.md#add-nuget-packages))
 
     * EasyAbp.Abp.EventBus.CAP
     * (Optional) EasyAbp.Abp.EventBus.CAP.MySql
     * (Optional) EasyAbp.Abp.EventBus.CAP.PostgreSql
     * (Optional) EasyAbp.Abp.EventBus.CAP.SqlServer
 
-1. Add `DependsOn(typeof(AbpEventBusCapXxxModule))` attribute to configure the module dependencies. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/How-To.md#add-module-dependencies))
+1. Add `DependsOn(typeof(AbpEventBusCapXxxModule))` attribute to configure the module dependencies. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/docs/How-To.md#add-module-dependencies))
 
 1. Configure the CAP.
 	```csharp
