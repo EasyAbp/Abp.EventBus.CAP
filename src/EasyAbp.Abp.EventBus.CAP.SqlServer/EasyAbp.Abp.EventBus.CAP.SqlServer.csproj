@@ -10,9 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="3.1.1" />
-    <PackageReference Include="Volo.Abp.Core" Version="4.0.2" />
-    <PackageReference Include="Volo.Abp.Dapper" Version="4.0.2" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="4.0.2" />
+    <PackageReference Include="Volo.Abp.Core" Version="$(AbpVersion)" />
+    <PackageReference Include="Volo.Abp.Dapper" Version="$(AbpVersion)" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="$(AbpVersion)" />
   </ItemGroup>
 
   <ItemGroup>
