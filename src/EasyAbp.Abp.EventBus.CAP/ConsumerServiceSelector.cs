@@ -34,8 +34,8 @@ namespace EasyAbp.Abp.EventBus.Cap
 
         protected override IEnumerable<ConsumerExecutorDescriptor> FindConsumersFromInterfaceTypes(IServiceProvider provider)
         {
-            var executorDescriptorList = 
-                base.FindConsumersFromInterfaceTypes(provider).ToList();
+            var executorDescriptorList = base.FindConsumersFromInterfaceTypes(provider).ToList();
+            
             //handlers
             var handlers = AbpDistributedEventBusOptions.Handlers;
 
@@ -49,12 +49,26 @@ namespace EasyAbp.Abp.EventBus.Cap
                         continue;
                     }
                     var genericArgs = @interface.GetGenericArguments();
-                    if (genericArgs.Length == 1)
+                    
+                    if (genericArgs.Length != 1)
                     {
-                        executorDescriptorList.AddRange(
-                            GetHandlerDescription(genericArgs[0], handler));
-                        //Subscribe(genericArgs[0], new IocEventHandlerFactory(ServiceScopeFactory, handler));
+                        continue;
                     }
+
+                    var descriptors = GetHandlerDescription(genericArgs[0], handler);
+
+                    foreach (var descriptor in descriptors)
+                    {
+                        var count = executorDescriptorList.Count(x =>
+                            x.Attribute.Name == descriptor.Attribute.Name);
+
+                        descriptor.Attribute.Group = descriptor.Attribute.Group.Insert(
+                            descriptor.Attribute.Group.LastIndexOf(".", StringComparison.Ordinal), $".{count}");
+                            
+                        executorDescriptorList.Add(descriptor);
+                    }
+                        
+                    //Subscribe(genericArgs[0], new IocEventHandlerFactory(ServiceScopeFactory, handler));
                 }
             }
             return executorDescriptorList;
@@ -73,7 +87,10 @@ namespace EasyAbp.Abp.EventBus.Cap
             var topicAttr = method.GetCustomAttributes<TopicAttribute>(true);
             var topicAttributes = topicAttr.ToList();
 
-            topicAttributes.Add(new CapSubscribeAttribute(eventName));
+            if (topicAttributes.Count == 0)
+            {
+                topicAttributes.Add(new CapSubscribeAttribute(eventName));
+            }
 
             foreach (var attr in topicAttributes)
             {
