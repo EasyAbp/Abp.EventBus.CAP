@@ -26,6 +26,8 @@ namespace DotNetCore.CAP.PostgreSql
         private readonly IOptions<CapOptions> _capOptions;
         private readonly IStorageInitializer _initializer;
         private readonly IOptions<EFOptions> _options;
+        private readonly ISerializer _serializer;
+
         public IMonitoringApi MonitoringApi { get; set; }
 
         private readonly string _pubName;
@@ -35,12 +37,14 @@ namespace DotNetCore.CAP.PostgreSql
             IOptions<EFOptions> options,
              IDbContextProvider<TDbContext> dbContextProvider, 
              IOptions<CapOptions> capOptions,
-            IStorageInitializer initializer)
+            IStorageInitializer initializer,
+             ISerializer serializer)
             : base(dbContextProvider)
         {
             _capOptions = capOptions;
             _initializer = initializer;
             _options = options;
+            _serializer = serializer;
             _pubName = initializer.GetPublishedTableName();
             _recName = initializer.GetReceivedTableName();
         }
@@ -83,7 +87,7 @@ namespace DotNetCore.CAP.PostgreSql
             {
                 DbId = content.GetId(),
                 Origin = content,
-                Content = StringSerializer.Serialize(content),
+                Content = _serializer.Serialize(content),
                 Added = DateTime.Now,
                 ExpiresAt = null,
                 Retries = 0
@@ -150,7 +154,7 @@ namespace DotNetCore.CAP.PostgreSql
                 ExpiresAt = null,
                 Retries = 0
             };
-            var content = StringSerializer.Serialize(mdMessage.Origin);
+            var content = _serializer.Serialize(mdMessage.Origin);
 
             this.DbConnection.Execute(sql, new
             {
@@ -188,7 +192,7 @@ namespace DotNetCore.CAP.PostgreSql
                 result.Add(new MediumMessage
                 {
                     DbId = reader.GetInt64(0).ToString(),
-                    Origin = StringSerializer.DeSerialize(reader.GetString(3)),
+                    Origin = _serializer.Deserialize(reader.GetString(3)),
                     Retries = reader.GetInt32(4),
                     Added = reader.GetDateTime(5)
                 });
@@ -211,7 +215,7 @@ namespace DotNetCore.CAP.PostgreSql
                 result.Add(new MediumMessage
                 {
                     DbId = reader.GetInt64(0).ToString(),
-                    Origin = StringSerializer.DeSerialize(reader.GetString(4)),
+                    Origin = _serializer.Deserialize(reader.GetString(4)),
                     Retries = reader.GetInt32(5),
                     Added = reader.GetDateTime(6)
                 });

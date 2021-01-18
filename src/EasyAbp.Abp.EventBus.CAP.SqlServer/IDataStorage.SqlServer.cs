@@ -25,7 +25,8 @@ namespace DotNetCore.CAP.SqlServer
     {
         private readonly IOptions<EFOptions> _options;
         private readonly IOptions<CapOptions> _capOptions;
-        private readonly IStorageInitializer _initializer; 
+        private readonly IStorageInitializer _initializer;
+        private readonly ISerializer _serializer;
         public IMonitoringApi MonitoringApi { get; set; }
         private readonly string _pubName;
         private readonly string _recName;
@@ -34,12 +35,14 @@ namespace DotNetCore.CAP.SqlServer
             IOptions<EFOptions> options,
             IDbContextProvider<TDbContext> dbContextProvider,
             IOptions<CapOptions> capOptions,
-            IStorageInitializer initializer)
+            IStorageInitializer initializer,
+            ISerializer serializer)
             :base(dbContextProvider)
         {
             _options = options;
             _capOptions = capOptions;
             _initializer = initializer;
+            _serializer = serializer;
             _pubName = initializer.GetPublishedTableName();
             _recName = initializer.GetReceivedTableName();
         }
@@ -81,7 +84,7 @@ namespace DotNetCore.CAP.SqlServer
             {
                 DbId = content.GetId(),
                 Origin = content,
-                Content = StringSerializer.Serialize(content),
+                Content = _serializer.Serialize(content),
                 Added = DateTime.Now,
                 ExpiresAt = null,
                 Retries = 0
@@ -150,7 +153,7 @@ namespace DotNetCore.CAP.SqlServer
                 ExpiresAt = null,
                 Retries = 0
             };
-            var content = StringSerializer.Serialize(mdMessage.Origin);
+            var content = _serializer.Serialize(mdMessage.Origin);
             var connection = this.DbConnection;
             connection.Execute(sql, new
             {
@@ -189,7 +192,7 @@ namespace DotNetCore.CAP.SqlServer
                 result.Add(new MediumMessage
                 {
                     DbId = reader.GetInt64(0).ToString(),
-                    Origin = StringSerializer.DeSerialize(reader.GetString(3)),
+                    Origin = _serializer.Deserialize(reader.GetString(3)),
                     Retries = reader.GetInt32(4),
                     Added = reader.GetDateTime(5)
                 });
@@ -214,7 +217,7 @@ namespace DotNetCore.CAP.SqlServer
                 result.Add(new MediumMessage
                 {
                     DbId = reader.GetInt64(0).ToString(),
-                    Origin = StringSerializer.DeSerialize(reader.GetString(4)),
+                    Origin = _serializer.Deserialize(reader.GetString(4)),
                     Retries = reader.GetInt32(5),
                     Added = reader.GetDateTime(6)
                 });

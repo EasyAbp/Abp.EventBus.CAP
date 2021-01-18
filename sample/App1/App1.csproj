@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.1" />
-    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.1" />
-    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="3.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.8" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.2" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.2" />
+    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
     <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
@@ -18,8 +18,8 @@
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-    <PackageReference Include="WorkflowCore" Version="3.2.6" />
-    <PackageReference Include="WorkflowCore.Persistence.Sqlite" Version="3.1.0" />
+    <PackageReference Include="WorkflowCore" Version="3.3.5" />
+    <PackageReference Include="WorkflowCore.Persistence.Sqlite" Version="3.3.0" />
   </ItemGroup>
 
   <ItemGroup>
