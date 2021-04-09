@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.2" />
+    <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="5.0.1" />
     <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.2" />
     <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
@@ -23,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP.MySql\EasyAbp.Abp.EventBus.CAP.MySql.csproj" />
     <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj" />
     <ProjectReference Include="..\SharedModule\SharedModule.csproj" />
   </ItemGroup>

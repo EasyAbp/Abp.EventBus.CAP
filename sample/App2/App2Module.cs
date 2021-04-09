@@ -9,15 +9,15 @@ using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
 using EasyAbp.Abp.EventBus.Cap;
-using EasyAbp.Abp.EventBus.CAP.PostgreSql;
 
 namespace App2
 {
     [DependsOn(
         typeof(AbpEventBusCapModule),
-        typeof(AbpEventBusCapPostgreSqlModule),
+        typeof(AbpEntityFrameworkCoreSqlServerModule),
         typeof(AbpAutofacModule),
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAspNetCoreSerilogModule))]
@@ -37,12 +37,14 @@ namespace App2
             {
                 /* The main point to change your DBMS.
                  * See also VoucherManagementMigrationsDbContextFactory for EF Core tooling. */
-                options.UseNpgsql();
+                options.UseSqlServer();
             });
 
             context.AddCapEventBus(capOptions =>
             {
-                capOptions.UseInMemoryStorage();
+                // If you are using EF, you need to add the configuration：
+                // Options, Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
+                capOptions.UseEntityFramework<AppDbContext>();
                 capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
                 capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
             });
