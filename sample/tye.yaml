@@ -1,0 +1,26 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: capeventdemo
+
+services:
+- name: App1
+  project: App1/App1.csproj
+  bindings:
+  - port: 5050
+- name: App2
+  project: App2/App2.csproj
+  bindings:
+  - port: 5051
+- name: rabbitmq
+  external: true
+  bindings: 
+  - port: 5672
+- name: zipkin
+  external: true
+  bindings:
+    - name: http
+      containerPort: 9411
