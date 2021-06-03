@@ -19,7 +19,7 @@ namespace App2.Controllers
         [HttpGet]
         public async Task<IActionResult> AppMessage()
         {
-            await _app1Message.RunAsync($"App2.Message { DateTime.Now}");
+            await _app1Message.RunAsync(string.Empty);
 
             return Ok();
         }

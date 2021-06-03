@@ -25,10 +25,10 @@ namespace App1
         public async Task HandleEventAsync(App2ToApp1TextEventData eventData)
         {
             _logger.LogInformation("************************ INCOMING MESSAGE ****************************");
-            _logger.LogInformation(eventData.TextMessage);
+            _logger.LogInformation(System.Text.Encoding.Default.GetString( eventData.TextMessage));
             _logger.LogInformation("**********************************************************************");
 
-           await _distributedEventBus.PublishAsync(new App1TextReceivedEventData(eventData.TextMessage));
+           await _distributedEventBus.PublishAsync(new App1TextReceivedEventData(System.Text.Encoding.Default.GetString(eventData.TextMessage)));
         }
     }
 }

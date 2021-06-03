@@ -26,25 +26,26 @@ namespace App2
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var configuration = context.Services.GetConfiguration();
-            context.Services.AddAbpDbContext<AppDbContext>(options =>
-            {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
-                options.AddDefaultRepositories(includeAllEntities: true);
-            });
+            //context.Services.AddAbpDbContext<AppDbContext>(options =>
+            //{
+            //    /* Remove "includeAllEntities: true" to create
+            //     * default repositories only for aggregate roots */
+            //    options.AddDefaultRepositories(includeAllEntities: true);
+            //});
 
-            Configure<AbpDbContextOptions>(options =>
-            {
-                /* The main point to change your DBMS.
-                 * See also VoucherManagementMigrationsDbContextFactory for EF Core tooling. */
-                options.UseSqlServer();
-            });
+            //Configure<AbpDbContextOptions>(options =>
+            //{
+            //    /* The main point to change your DBMS.
+            //     * See also VoucherManagementMigrationsDbContextFactory for EF Core tooling. */
+            //    options.UseSqlServer();
+            //});
 
             context.AddCapEventBus(capOptions =>
             {
                 // If you are using EF, you need to add the configuration：
                 // Options, Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
-                capOptions.UseEntityFramework<AppDbContext>();
+                //capOptions.UseEntityFramework<AppDbContext>();
+                capOptions.UseInMemoryStorage();
                 capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
                 capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
             });

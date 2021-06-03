@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using SharedModule;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus.Distributed;
@@ -23,11 +24,12 @@ namespace App2
             if (!message.IsNullOrEmpty())
             {
                 _logger.LogInformation($"{message} send to the App1.");
-                await _distributedEventBus.PublishAsync(new App2ToApp1TextEventData(message));
+                await _distributedEventBus.PublishAsync(new App2ToApp1TextEventData(System.Text.Encoding.Default.GetBytes(message)));
             }
             else
             {
-                await _distributedEventBus.PublishAsync(new App2ToApp1TextEventData("App2 is exiting. Bye bye...!"));
+                byte[] myByteArray = Enumerable.Repeat((byte)0x08, 1024*1024*3).ToArray();
+                await _distributedEventBus.PublishAsync(new App2ToApp1TextEventData(myByteArray));
             }
 
         }

@@ -8,14 +8,14 @@ namespace SharedModule
     [EventName("Test.App2ToApp1Text")] //Optional event name
     public class App2ToApp1TextEventData
     {
-        public string TextMessage { get; set; }
+        public byte[] TextMessage { get; set; }
 
         public App2ToApp1TextEventData()
         {
 
         }
 
-        public App2ToApp1TextEventData(string textMessage)
+        public App2ToApp1TextEventData(byte[] textMessage)
         {
             TextMessage = textMessage;
         }

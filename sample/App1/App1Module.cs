@@ -30,7 +30,7 @@ namespace App1
           
             context.AddCapEventBus(capOptions =>
             {
-                capOptions.UsePostgreSql("");
+                capOptions.UseInMemoryStorage();
                 capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
                 capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
             });
