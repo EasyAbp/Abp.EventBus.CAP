@@ -46,7 +46,8 @@ namespace App2
                 // Options, Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
                 //capOptions.UseEntityFramework<AppDbContext>();
                 capOptions.UseInMemoryStorage();
-                capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
+                capOptions.UseRedis(redisOptions => {
+                });
                 capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
             });
 

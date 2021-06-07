@@ -6,11 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.CAP.Kafka" Version="5.0.1" />
-    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="5.0.1" />
-    <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="5.0.1" />
-    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="5.0.1" />
-    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="5.0.1" />
+    <PackageReference Include="DotNetCore.CAP.Kafka" Version="5.0.3" />
+    <PackageReference Include="DotNetCore.CAP.RedisStreams" Version="5.0.3" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="5.0.3" />
+    <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="5.0.3" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="5.0.3" />
+    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="5.0.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpVersion)" />
