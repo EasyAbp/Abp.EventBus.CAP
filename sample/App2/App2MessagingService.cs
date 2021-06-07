@@ -28,7 +28,7 @@ namespace App2
             }
             else
             {
-                byte[] myByteArray = Enumerable.Repeat((byte)0x08, 1024*1024*3).ToArray();
+                byte[] myByteArray = Enumerable.Repeat((byte)0x08, 1024*224).ToArray();
                 await _distributedEventBus.PublishAsync(new App2ToApp1TextEventData(myByteArray));
             }
 
