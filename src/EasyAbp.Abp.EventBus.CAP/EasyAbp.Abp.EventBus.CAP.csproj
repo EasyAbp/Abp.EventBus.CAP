@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.CAP" Version="5.0.3" />
-    <PackageReference Include="Volo.Abp.Core" Version="$(AbpVersion)" />
-    <PackageReference Include="Volo.Abp.EventBus" Version="$(AbpVersion)" />
+    <PackageReference Include="DotNetCore.CAP" Version="5.1.0" />
+    <PackageReference Include="Volo.Abp.Core" Version="4.3.2" />
+    <PackageReference Include="Volo.Abp.EventBus" Version="4.3.2" />
   </ItemGroup>
 
   <ItemGroup>
