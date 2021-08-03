@@ -32,8 +32,9 @@ namespace EasyAbp.Abp.EventBus.Cap
         public CapDistributedEventBus(IServiceScopeFactory serviceScopeFactory,
             IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions,
             ICapPublisher capPublisher, 
-            ICurrentTenant currentTenant)
-            : base(serviceScopeFactory, currentTenant)
+            ICurrentTenant currentTenant,
+            IEventErrorHandler errorHandler)
+            : base(serviceScopeFactory, currentTenant, errorHandler)
         {
             CapPublisher = capPublisher;
             AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
