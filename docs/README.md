@@ -1,10 +1,3 @@
-# **NOTICE**
-This module is no longer needed since the ABP framework v5.0+ has introduced new [Outbox & Inbox patterns for the distributed event bus](https://github.com/abpframework/abp/pull/10008). Now you should remove this module from your app and install one of the event bus [providers](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus#providers) directly.
-
-[![Discord online](https://badgen.net/discord/online-members/S6QaezrCRq?label=Discord)](https://discord.gg/S6QaezrCRq)
-
-<details>
-<summary>Deprecated content</summary>
 # Abp.EventBus.CAP
 
 [![ABP version](https://img.shields.io/badge/dynamic/xml?style=flat-square&color=yellow&label=abp&query=%2F%2FProject%2FPropertyGroup%2FAbpVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2FEasyAbp%2FAbp.EventBus.CAP%2Fmaster%2FDirectory.Build.props)](https://abp.io)
@@ -40,4 +33,3 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
 ## Usage
 
 See the [ABP distributed event bus document](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus) and the [CAP document](https://cap.dotnetcore.xyz/user-guide/en/getting-started/quick-start).
-</details>
