@@ -15,6 +15,7 @@ using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Threading;
+using Volo.Abp.Uow;
 
 namespace EasyAbp.Abp.EventBus.Cap
 {
@@ -31,10 +32,10 @@ namespace EasyAbp.Abp.EventBus.Cap
 
         public CapDistributedEventBus(IServiceScopeFactory serviceScopeFactory,
             IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions,
-            ICapPublisher capPublisher, 
-            ICurrentTenant currentTenant,
-            IEventErrorHandler errorHandler)
-            : base(serviceScopeFactory, currentTenant, errorHandler)
+            ICapPublisher capPublisher,
+            IUnitOfWorkManager unitOfWorkManager,
+            ICurrentTenant currentTenant)
+            : base(serviceScopeFactory, currentTenant, unitOfWorkManager)
         {
             CapPublisher = capPublisher;
             AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
@@ -103,11 +104,46 @@ namespace EasyAbp.Abp.EventBus.Cap
             return Subscribe(typeof(TEvent), handler);
         }
 
+        public virtual Task PublishAsync<TEvent>(TEvent eventData, bool onUnitOfWorkComplete = true, bool useOutbox = true) where TEvent : class
+        {
+            return PublishAsync(typeof(TEvent), eventData, onUnitOfWorkComplete, useOutbox);
+        }
 
-        public override async Task PublishAsync(Type eventType, object eventData)
+        public virtual async Task PublishAsync(Type eventType, object eventData, bool onUnitOfWorkComplete = true, bool useOutbox = true)
+        {
+            if (onUnitOfWorkComplete && UnitOfWorkManager.Current != null)
+            {
+                AddToUnitOfWork(
+                    UnitOfWorkManager.Current,
+                    new UnitOfWorkEventRecord(eventType, eventData, EventOrderGenerator.GetNext(), useOutbox)
+                );
+                return;
+            }
+
+            if (useOutbox && UnitOfWorkManager.Current != null)
+            {
+                // Todo: should use transaction, see: https://github.com/dotnetcore/CAP/blob/bdfd1016e61394f603da1a84ab8567a42bf740d9/docs/content/user-guide/en/storage/postgresql.md#publish-with-transaction
+            
+                UnitOfWorkManager.Current.OnCompleted(async () =>
+                {
+                    await PublishToEventBusAsync(eventType, eventData);
+                });
+
+                return;
+            }
+
+            await PublishToEventBusAsync(eventType, eventData);
+        }
+
+        protected override async Task PublishToEventBusAsync(Type eventType, object eventData)
         {
             var eventName = EventNameAttribute.GetNameOrDefault(eventType);
             await CapPublisher.PublishAsync(eventName, eventData);
+        }
+
+        protected override void AddToUnitOfWork(IUnitOfWork unitOfWork, UnitOfWorkEventRecord eventRecord)
+        {
+            unitOfWork.AddOrReplaceDistributedEvent(eventRecord);
         }
 
         protected override IEnumerable<EventTypeWithEventHandlerFactories> GetHandlerFactories(Type eventType)
