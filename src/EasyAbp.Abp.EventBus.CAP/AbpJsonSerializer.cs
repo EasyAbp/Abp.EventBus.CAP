@@ -61,12 +61,7 @@ public class AbpJsonSerializer : ISerializer, ISingletonDependency
 
     public virtual object Deserialize(object value, Type valueType)
     {
-        return value switch
-        {
-            JToken jToken => jToken.ToObject(valueType),
-            JsonElement jsonElement => _jsonSerializer.Deserialize(valueType, jsonElement.ToString()),
-            _ => throw new NotSupportedException("Type is not of type JToken or JsonElement")
-        };
+        return _jsonSerializer.Deserialize(valueType, value.ToString());
     }
 
     public virtual bool IsJsonType(object jsonObject)

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using Volo.Abp.Data;
 
-namespace EasyAbp.Abp.EventBus.CAP;
+namespace EasyAbp.Abp.EventBus.CAP.Models;
 
 public class Book : IHasExtraProperties
 {
