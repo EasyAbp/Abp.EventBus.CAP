@@ -2,7 +2,7 @@
   <PropertyGroup>
 
     <AbpVersion>5.0.1</AbpVersion>
-    <CapPackageVersion>6.0.0-preview-153999281</CapPackageVersion>
+    <CapPackageVersion>6.0.0</CapPackageVersion>
 
   </PropertyGroup>
 </Project>
