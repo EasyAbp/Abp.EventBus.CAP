@@ -60,7 +60,7 @@ public class EfCoreCapTransactionApiFactory : ICapTransactionApiFactory
         
         var capTransactionType = dbProviderInfo.CapTransactionType;
 
-        if (ActivatorUtilities.CreateInstance(Publisher.ServiceProvider, capTransactionType) is not ICapTransaction capTransaction)
+        if (ActivatorUtilities.CreateInstance(Publisher.ServiceProvider, capTransactionType) is not CapTransactionBase capTransaction)
         {
             return null;
         }

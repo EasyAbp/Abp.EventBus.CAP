@@ -24,6 +24,7 @@ using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
+using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
@@ -52,6 +53,9 @@ namespace CapSample
             var configuration = context.Services.GetConfiguration();
             var hostingEnvironment = context.Services.GetHostingEnvironment();
 
+            // This sample app does not need back ground job.
+            Configure<AbpBackgroundJobOptions>(options => options.IsJobExecutionEnabled = false);
+            
             ConfigureBundles();
             ConfigureUrls(configuration);
             ConfigureConventionalControllers();
