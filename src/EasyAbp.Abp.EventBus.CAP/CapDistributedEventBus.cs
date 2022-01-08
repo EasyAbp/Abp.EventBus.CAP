@@ -124,12 +124,18 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus, ISingl
 
         if (useOutbox && UnitOfWorkManager.Current != null)
         {
-            // Todo: should use transaction, see: https://github.com/dotnetcore/CAP/blob/bdfd1016e61394f603da1a84ab8567a42bf740d9/docs/content/user-guide/en/storage/postgresql.md#publish-with-transaction
-
-            UnitOfWorkManager.Current.OnCompleted(async () =>
+            if (CapPublisher.Transaction.Value is null)
             {
+                UnitOfWorkManager.Current.OnCompleted(async () =>
+                {
+                    await PublishToEventBusAsync(eventType, eventData);
+                });
+            }
+            else
+            {
+                // Use CAP outbox
                 await PublishToEventBusAsync(eventType, eventData);
-            });
+            }
 
             return;
         }

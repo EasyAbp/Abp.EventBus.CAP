@@ -9,15 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="$(CapPackageVersion)" />
-    <PackageReference Include="Volo.Abp.Core" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.EventBus" Version="$(AbpVersion)" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="Fody" Version="6.5.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Volo.Abp.Uow" Version="$(AbpVersion)" />
   </ItemGroup>
 
 </Project>

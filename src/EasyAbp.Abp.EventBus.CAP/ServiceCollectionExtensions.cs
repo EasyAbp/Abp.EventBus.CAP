@@ -6,10 +6,14 @@ using DotNetCore.CAP.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using DotNetCore.CAP.Serialization;
+using EasyAbp.Abp.EventBus.Cap;
 using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.Modularity;
+using Volo.Abp.Uow;
+using ConsumerServiceSelector = DotNetCore.CAP.Internal.ConsumerServiceSelector;
 
-namespace EasyAbp.Abp.EventBus.Cap
+// ReSharper disable once CheckNamespace
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
@@ -18,7 +22,8 @@ namespace EasyAbp.Abp.EventBus.Cap
             context.Services.AddSingleton<IConsumerServiceSelector, ConsumerServiceSelector>();
             context.Services.AddSingleton<IDistributedEventBus, CapDistributedEventBus>();
             context.Services.AddSingleton<ISerializer, AbpJsonSerializer>();
-            
+            context.Services.AddTransient<IUnitOfWork, CapUnitOfWork>();
+
             context.Services.AddCap(capAction);
 
             return context;

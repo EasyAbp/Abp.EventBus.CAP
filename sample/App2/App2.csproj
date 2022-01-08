@@ -22,6 +22,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP.EntityFrameworkCore\EasyAbp.Abp.EventBus.CAP.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj" />
     <ProjectReference Include="..\SharedModule\SharedModule.csproj" />
   </ItemGroup>

@@ -17,6 +17,7 @@ namespace App2
 {
     [DependsOn(
         typeof(AbpEventBusCapModule),
+        typeof(AbpEventBusCapEntityFrameworkCoreModule),
         typeof(AbpEntityFrameworkCoreSqlServerModule),
         typeof(AbpAutofacModule),
         typeof(AbpAspNetCoreMvcModule),
@@ -42,11 +43,13 @@ namespace App2
 
             context.AddCapEventBus(capOptions =>
             {
+                // Set this so that the CapDistributedEventBus can recognize the DbContext used by CAP.
+                capOptions.SetDbContextForCap<AppDbContext>();
                 // If you are using EF, you need to add the configuration：
                 // Options, Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
                 capOptions.UseEntityFramework<AppDbContext>();
-                capOptions.UseRabbitMQ("localhost");//UseRabbitMQ 服务器地址配置，支持配置IP地址和密码
-                capOptions.UseDashboard();//CAP2.X版本以后官方提供了Dashboard页面访问。
+                capOptions.UseRabbitMQ("localhost");
+                capOptions.UseDashboard();
             });
 
             ConfigureSwaggerServices(context, configuration);
