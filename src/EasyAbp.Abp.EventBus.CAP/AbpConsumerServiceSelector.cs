@@ -16,9 +16,8 @@ using Volo.Abp.EventBus.Distributed;
 namespace EasyAbp.Abp.EventBus.Cap
 {
     [Dependency(ServiceLifetime.Singleton,ReplaceServices = true)]
-    [ExposeServices(typeof(IConsumerServiceSelector))]
-
-    public class ConsumerServiceSelector: DotNetCore.CAP.Internal.ConsumerServiceSelector
+    [ExposeServices(typeof(IConsumerServiceSelector), typeof(ConsumerServiceSelector))]
+    public class AbpConsumerServiceSelector: ConsumerServiceSelector
     {
         protected AbpDistributedEventBusOptions AbpDistributedEventBusOptions { get; }
         protected IServiceProvider ServiceProvider { get; }
@@ -26,7 +25,7 @@ namespace EasyAbp.Abp.EventBus.Cap
         /// <summary>
         /// Creates a new <see cref="T:DotNetCore.CAP.Internal.ConsumerServiceSelector" />.
         /// </summary>
-        public ConsumerServiceSelector(IServiceProvider serviceProvider, IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions) : base(serviceProvider)
+        public AbpConsumerServiceSelector(IServiceProvider serviceProvider, IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions) : base(serviceProvider)
         {
             ServiceProvider = serviceProvider;
             AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
