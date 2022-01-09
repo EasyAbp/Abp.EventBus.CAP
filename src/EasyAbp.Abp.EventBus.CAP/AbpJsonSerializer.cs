@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 using DotNetCore.CAP.Messages;
 using DotNetCore.CAP.Serialization;
 using Newtonsoft.Json.Linq;
-using Volo.Abp.DependencyInjection;
 using Volo.Abp.Json;
 
 namespace EasyAbp.Abp.EventBus.Cap;
 
-[Dependency(ReplaceServices = true)]
-public class AbpJsonSerializer : ISerializer, ISingletonDependency
+public class AbpJsonSerializer : ISerializer
 {
     private readonly IJsonSerializer _jsonSerializer;
 

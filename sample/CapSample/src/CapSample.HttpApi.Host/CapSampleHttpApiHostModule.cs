@@ -68,7 +68,7 @@ namespace CapSample
             ConfigureCors(context, configuration);
             ConfigureSwaggerServices(context, configuration);
             
-            context.Services.AddCap(options =>
+            context.AddCapEventBus(options =>
             {
                 // If you are using EF, you need to add the configuration：
                 options.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]); // CAP uses a single connection string.

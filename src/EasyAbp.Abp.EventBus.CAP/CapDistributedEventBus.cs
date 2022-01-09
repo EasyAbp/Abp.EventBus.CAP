@@ -11,7 +11,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using EasyAbp.Abp.EventBus.CAP;
 using Volo.Abp;
-using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.MultiTenancy;
@@ -20,9 +19,7 @@ using Volo.Abp.Uow;
 
 namespace EasyAbp.Abp.EventBus.Cap;
 
-[Dependency(ReplaceServices = true)]
-[ExposeServices(typeof(IDistributedEventBus), typeof(CapDistributedEventBus))]
-public class CapDistributedEventBus : EventBusBase, IDistributedEventBus, ISingletonDependency
+public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
 {
     protected AbpDistributedEventBusOptions AbpDistributedEventBusOptions { get; }
     protected readonly ICapPublisher CapPublisher;

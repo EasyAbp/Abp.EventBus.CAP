@@ -10,8 +10,7 @@ using Volo.Abp.Uow;
 
 namespace EasyAbp.Abp.EventBus.Cap;
 
-[Dependency(ReplaceServices = true)]
-[ExposeServices(typeof(CapUnitOfWork), typeof(UnitOfWork), typeof(IUnitOfWork))]
+[Dependency(TryRegister = true)]
 public class CapUnitOfWork : UnitOfWork
 {
     public ICapTransaction CapTransaction { get; protected set; }

@@ -6,6 +6,7 @@ using DotNetCore.CAP.Internal;
 using System;
 using DotNetCore.CAP.Serialization;
 using EasyAbp.Abp.EventBus.Cap;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.Modularity;
 using Volo.Abp.Uow;
@@ -20,7 +21,9 @@ namespace Microsoft.Extensions.DependencyInjection
             context.Services.AddSingleton<IConsumerServiceSelector, AbpConsumerServiceSelector>();
             context.Services.AddSingleton<IDistributedEventBus, CapDistributedEventBus>();
             context.Services.AddSingleton<ISerializer, AbpJsonSerializer>();
-            context.Services.AddTransient<IUnitOfWork, CapUnitOfWork>();
+            context.Services.Replace(ServiceDescriptor.Transient<IUnitOfWork, CapUnitOfWork>());
+            context.Services.Replace(ServiceDescriptor.Transient<UnitOfWork, CapUnitOfWork>());
+            context.Services.AddTransient<CapUnitOfWork>();
 
             context.Services.AddCap(capAction);
 
