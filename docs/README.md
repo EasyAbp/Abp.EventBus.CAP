@@ -24,12 +24,12 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
 1. Add `DependsOn(typeof(AbpEventBusCapXxxModule))` attribute to configure the module dependencies. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/docs/How-To.md#add-module-dependencies))
 
 1. Configure the CAP.
-	```csharp
-	public override void ConfigureServices(ServiceConfigurationContext context)
-	{
-		var configuration = context.Services.GetConfiguration();
-		context.AddCapEventBus(capOptions =>
-		{
+    ```csharp
+    public override void ConfigureServices(ServiceConfigurationContext context)
+    {
+        var configuration = context.Services.GetConfiguration();
+        context.AddCapEventBus(capOptions =>
+        {
             // If you are using EF, you need to add the configuration：
             options.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]);
             options.UseEntityFramework<MyDbContext>();
@@ -39,9 +39,9 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
             
             // We provide permission named "CapDashboard.Manage" for authorization.
             options.UseAbpDashboard();
-		});
-	}
-	```
+        });
+    }
+    ```
 
 ## Usage
 
