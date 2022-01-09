@@ -45,6 +45,7 @@ namespace CapSample
         typeof(AbpAccountWebIdentityServerModule),
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule),
+        typeof(AbpEventBusCapModule),
         typeof(AbpEventBusCapEntityFrameworkCoreModule),
         typeof(AbpEventBusCapDashboardModule)
     )]

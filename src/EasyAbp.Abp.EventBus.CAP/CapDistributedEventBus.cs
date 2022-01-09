@@ -136,7 +136,7 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus, ISingl
             {
                 using (CapPublisher.UseTransaction(capUnitOfWork.CapTransaction))
                 {
-                    // Use CAP outbox
+                    // Use CAP transactional outbox
                     await PublishToEventBusAsync(eventType, eventData);
                 }
             }

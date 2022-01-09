@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\EasyAbp.Abp.EventBus.CAP\EasyAbp.Abp.EventBus.CAP.csproj" />
     <ProjectReference Include="..\..\..\..\src\EasyAbp.Abp.EventBus.CAP.EntityFrameworkCore\EasyAbp.Abp.EventBus.CAP.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\..\..\src\EasyAbp.Abp.EventBus.CAP.Dashboard\EasyAbp.Abp.EventBus.CAP.Dashboard.csproj" />
     <ProjectReference Include="..\CapSample.Application\CapSample.Application.csproj" />
