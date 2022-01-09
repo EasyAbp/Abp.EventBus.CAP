@@ -2,6 +2,7 @@ using CapSample.Books;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using CapSample.MultiTenancy;
+using CapSample.SecondBooks;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Domain.Entities.Events.Distributed;
@@ -39,6 +40,9 @@ namespace CapSample
             {
                 options.AutoEventSelectors.Add<Book>();
                 options.EtoMappings.Add<Book, Book>();
+                
+                options.AutoEventSelectors.Add<SecondBook>();
+                options.EtoMappings.Add<SecondBook, SecondBook>();
             });
             
             Configure<AbpMultiTenancyOptions>(options =>

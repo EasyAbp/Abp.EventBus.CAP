@@ -40,12 +40,20 @@ namespace CapSample.EntityFrameworkCore
                  * default repositories only for aggregate roots */
                 options.AddDefaultRepositories(includeAllEntities: true);
             });
+            
+            context.Services.AddAbpDbContext<SecondDbContext>(options =>
+            {
+                /* Remove "includeAllEntities: true" to create
+                 * default repositories only for aggregate roots */
+                options.AddDefaultRepositories(includeAllEntities: true);
+            });
 
             Configure<AbpDbContextOptions>(options =>
             {
                 /* The main point to change your DBMS.
                  * See also CapSampleMigrationsDbContextFactory for EF Core tooling. */
                 options.UseSqlServer();
+                options.UseSqlServer<SecondDbContext>();
             });
         }
     }

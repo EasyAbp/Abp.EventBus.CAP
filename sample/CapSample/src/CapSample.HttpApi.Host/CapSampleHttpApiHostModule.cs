@@ -68,7 +68,7 @@ namespace CapSample
             context.Services.AddCap(options =>
             {
                 // If you are using EF, you need to add the configuration：
-                options.SetDbContextForCap<CapSampleDbContext>(); // Set this so that the CapDistributedEventBus can recognize the DbContext used by CAP.
+                options.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]); // CAP uses a single connection string.
                 options.UseEntityFramework<CapSampleDbContext>(); // Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
 
                 // CAP support RabbitMQ,Kafka,AzureService as the MQ, choose to add configuration you needed：

@@ -1,6 +1,7 @@
 using System;
 using DotNetCore.CAP;
 using EasyAbp.Abp.EventBus.CAP;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -45,8 +46,7 @@ public class EfCoreCapTransactionApiFactory : ICapTransactionApiFactory
 
     protected virtual IDbContextTransaction CreateCapTransactionOrNull(EfCoreTransactionApi originalApi)
     {
-        if (originalApi.StarterDbContext is null || Options.AbpEfDbContextType is null ||
-            originalApi.StarterDbContext.GetType() != Options.AbpEfDbContextType)
+        if (Options.CapUsingDbConnectionString != originalApi.StarterDbContext.Database.GetConnectionString())
         {
             return null;
         }

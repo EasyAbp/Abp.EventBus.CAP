@@ -1,7 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp.EventBus;
 using Volo.Abp.Modularity;
-using Volo.Abp.Uow;
 
 namespace EasyAbp.Abp.EventBus.Cap
 {

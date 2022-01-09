@@ -43,8 +43,7 @@ namespace App2
 
             context.AddCapEventBus(capOptions =>
             {
-                // Set this so that the CapDistributedEventBus can recognize the DbContext used by CAP.
-                capOptions.SetDbContextForCap<AppDbContext>();
+                capOptions.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]); // CAP uses a single connection string.
                 // If you are using EF, you need to add the configuration：
                 // Options, Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
                 capOptions.UseEntityFramework<AppDbContext>();
