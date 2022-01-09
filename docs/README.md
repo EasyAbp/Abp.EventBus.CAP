@@ -53,10 +53,10 @@ After ABP 5.0 released, the distributed event bus was redesigned. See: https://g
 
 ```c#
 // ABP 5.0
-Task PublishAsync<TEvent>(TEvent eventData, bool onUnitOfWorkComplete = true, bool useOutbox = true)
+Task PublishAsync<TEvent>(TEvent eventData, bool onUnitOfWorkComplete = true, bool useOutbox = true);
 
 // ABP 4.0
-Task PublishAsync<TEvent>(TEvent eventData)
+Task PublishAsync<TEvent>(TEvent eventData);
 ```
 
 Before ABP 5.0, when you invoke PublishAsync, the bus will push the event to MQ at once.
