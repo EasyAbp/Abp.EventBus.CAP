@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSample.HttpApi.Client.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSample.TestBase", "sample\CapSample\test\CapSample.TestBase\CapSample.TestBase.csproj", "{7726D18F-E3E1-4D5B-91D7-BD6104E703FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.EventBus.Cap.Dashboard", "src\EasyAbp.Abp.EventBus.Cap.Dashboard\EasyAbp.Abp.EventBus.Cap.Dashboard.csproj", "{240C7228-0933-412E-AD51-13AC1C8FC252}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{7726D18F-E3E1-4D5B-91D7-BD6104E703FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7726D18F-E3E1-4D5B-91D7-BD6104E703FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7726D18F-E3E1-4D5B-91D7-BD6104E703FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240C7228-0933-412E-AD51-13AC1C8FC252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240C7228-0933-412E-AD51-13AC1C8FC252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240C7228-0933-412E-AD51-13AC1C8FC252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240C7228-0933-412E-AD51-13AC1C8FC252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +175,7 @@ Global
 		{7726D18F-E3E1-4D5B-91D7-BD6104E703FE} = {0D8A9661-2027-4B83-BEDA-9065CA510909}
 		{B52B2E39-2DCE-4299-B360-A4A5E66AD33B} = {1F570C63-EB39-4A9B-95F6-E44E2B2124DA}
 		{A7479ED7-48AE-42CE-8D06-517A3CE3AE99} = {367B1E1A-1A19-43EB-9556-2383A135BE23}
+		{240C7228-0933-412E-AD51-13AC1C8FC252} = {B27B7AC2-9AB3-43CA-98F1-518108AD2366}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97805FC8-B0DF-4423-B75C-0A2945FA2417}

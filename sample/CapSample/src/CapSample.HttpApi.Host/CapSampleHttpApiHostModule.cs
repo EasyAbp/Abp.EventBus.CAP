@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using CapSample.EntityFrameworkCore;
 using CapSample.MultiTenancy;
 using EasyAbp.Abp.EventBus.Cap;
+using EasyAbp.Abp.EventBus.CAP;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
@@ -44,7 +45,8 @@ namespace CapSample
         typeof(AbpAccountWebIdentityServerModule),
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule),
-        typeof(AbpEventBusCapEntityFrameworkCoreModule)
+        typeof(AbpEventBusCapEntityFrameworkCoreModule),
+        typeof(AbpEventBusCapDashboardModule)
     )]
     public class CapSampleHttpApiHostModule : AbpModule
     {
@@ -72,11 +74,10 @@ namespace CapSample
                 options.UseEntityFramework<CapSampleDbContext>(); // Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
 
                 // CAP support RabbitMQ,Kafka,AzureService as the MQ, choose to add configuration you needed：
-                options.UseRabbitMQ(rmqOptions =>
-                {
-                    rmqOptions.HostName = "localhost";
-                    rmqOptions.Port = 5672;
-                });
+                options.UseRabbitMQ("localhost");
+                
+                // We provide permission named "CapDashboard.Manage" for authorization.
+                options.UseAbpDashboard();
             });
         }
 
