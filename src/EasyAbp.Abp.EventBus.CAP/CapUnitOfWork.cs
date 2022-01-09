@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCore.CAP;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Volo.Abp;
@@ -13,9 +14,18 @@ namespace EasyAbp.Abp.EventBus.Cap;
 [ExposeServices(typeof(CapUnitOfWork), typeof(UnitOfWork), typeof(IUnitOfWork))]
 public class CapUnitOfWork : UnitOfWork
 {
-    public CapUnitOfWork(IServiceProvider serviceProvider, IUnitOfWorkEventPublisher unitOfWorkEventPublisher,
-        IOptions<AbpUnitOfWorkDefaultOptions> options) : base(serviceProvider, unitOfWorkEventPublisher, options)
+    public ICapTransaction CapTransaction { get; protected set; }
+
+    protected ICapPublisher CapPublisher { get; }
+
+    public CapUnitOfWork(
+        IServiceProvider serviceProvider,
+        IUnitOfWorkEventPublisher unitOfWorkEventPublisher,
+        IOptions<AbpUnitOfWorkDefaultOptions> options,
+        ICapPublisher capPublisher)
+        : base(serviceProvider, unitOfWorkEventPublisher, options)
     {
+        CapPublisher = capPublisher;
     }
 
     public override void AddTransactionApi(string key, ITransactionApi api)
@@ -27,6 +37,7 @@ public class CapUnitOfWork : UnitOfWork
         if (factory is not null)
         {
             api = factory.Create(api);
+            CapTransaction = CapPublisher.Transaction.Value;
         }
         
         base.AddTransactionApi(key, api);

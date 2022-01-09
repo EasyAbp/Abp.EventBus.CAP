@@ -9,6 +9,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EasyAbp.Abp.EventBus.CAP;
 using Volo.Abp;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus;
@@ -124,7 +125,7 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus, ISingl
 
         if (useOutbox && UnitOfWorkManager.Current != null)
         {
-            if (CapPublisher.Transaction.Value is null)
+            if (UnitOfWorkManager.Current is not CapUnitOfWork capUnitOfWork || capUnitOfWork.CapTransaction is null)
             {
                 UnitOfWorkManager.Current.OnCompleted(async () =>
                 {
@@ -133,8 +134,11 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus, ISingl
             }
             else
             {
-                // Use CAP outbox
-                await PublishToEventBusAsync(eventType, eventData);
+                using (CapPublisher.UseTransaction(capUnitOfWork.CapTransaction))
+                {
+                    // Use CAP outbox
+                    await PublishToEventBusAsync(eventType, eventData);
+                }
             }
 
             return;
