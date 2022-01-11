@@ -14,6 +14,7 @@ using EasyAbp.Abp.EventBus.Cap;
 using EasyAbp.Abp.EventBus.CAP;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Microsoft.OpenApi.Models;
+using Savorboard.CAP.InMemoryMessageQueue;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
@@ -75,7 +76,7 @@ namespace CapSample
                 options.UseEntityFramework<CapSampleDbContext>(); // Notice: You don't need to config x.UseSqlServer(""") again! CAP can autodiscovery.
 
                 // CAP support RabbitMQ,Kafka,AzureService as the MQ, choose to add configuration you needed：
-                options.UseRabbitMQ("localhost");
+                options.UseInMemoryMessageQueue();
                 
                 // We provide permission named "CapDashboard.Manage" for authorization.
                 options.UseAbpDashboard();
