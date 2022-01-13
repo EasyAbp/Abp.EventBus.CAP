@@ -32,8 +32,9 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
         IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions,
         ICapPublisher capPublisher,
         IUnitOfWorkManager unitOfWorkManager,
-        ICurrentTenant currentTenant)
-        : base(serviceScopeFactory, currentTenant, unitOfWorkManager)
+        ICurrentTenant currentTenant,
+        IEventHandlerInvoker eventHandlerInvoker)
+        : base(serviceScopeFactory, currentTenant, unitOfWorkManager, eventHandlerInvoker)
     {
         CapPublisher = capPublisher;
         AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
