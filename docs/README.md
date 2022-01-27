@@ -30,7 +30,7 @@ ABP vNext framework CAP EventBus module that integrated the [CAP](https://github
         var configuration = context.Services.GetConfiguration();
         context.AddCapEventBus(capOptions =>
         {
-            // If you are using EF, you need to add the configuration：
+            // If you are using EF, you need to add:
             options.SetCapDbConnectionString(configuration["ConnectionStrings:Default"]);
             options.UseEntityFramework<MyDbContext>();
 
