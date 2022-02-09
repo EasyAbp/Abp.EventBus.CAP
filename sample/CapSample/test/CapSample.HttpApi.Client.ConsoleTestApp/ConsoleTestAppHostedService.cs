@@ -18,18 +18,18 @@ namespace CapSample.HttpApi.Client.ConsoleTestApp
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var application = AbpApplicationFactory.Create<CapSampleConsoleApiClientModule>(options =>
+            using (var application = await AbpApplicationFactory.CreateAsync<CapSampleConsoleApiClientModule>(options =>
             {
                 options.Services.ReplaceConfiguration(_configuration);
                 options.UseAutofac();
             }))
             {
-                application.Initialize();
+                await application.InitializeAsync();
 
                 var demo = application.ServiceProvider.GetRequiredService<ClientDemoService>();
                 await demo.RunAsync();
 
-                application.Shutdown();
+                await application.ShutdownAsync();
             }
         }
 
