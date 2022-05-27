@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
+using EasyAbp.Abp.EventBus.CAP;
 using Microsoft.Extensions.Options;
 using Volo.Abp.EventBus;
 using Volo.Abp.EventBus.Distributed;
@@ -77,6 +78,16 @@ namespace EasyAbp.Abp.EventBus.Cap
                     nameof(IDistributedEventHandler<object>.HandleEventAsync),
                     new[] { eventType }
                 );
+            if (method == null)
+            {
+                serviceTypeInfo = typeof(ICapDistributedEventHandler<>)
+                       .MakeGenericType(eventType);
+                method = typeInfo
+                   .GetMethod(
+                       nameof(ICapDistributedEventHandler<object>.HandleEventAsync),
+                       new[] { eventType, typeof(CapHeader) }
+                   );
+            }
             var eventName = EventNameAttribute.GetNameOrDefault(eventType);
             var topicAttr = method.GetCustomAttributes<TopicAttribute>(true);
             var topicAttributes = topicAttr.ToList();
