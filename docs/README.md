@@ -66,3 +66,6 @@ As you can see, after ABP 5.0, events are sent using outbox on UOW complete by d
 If you install the `EasyAbp.Abp.EventBus.EntityFramework` module, events are published with CAP's transactional outbox. Otherwise, they are published on UOW completed. See the [CapDistributedEventBus](https://github.com/EasyAbp/Abp.EventBus.CAP/blob/master/src/EasyAbp.Abp.EventBus.CAP/CapDistributedEventBus.cs) for more information.
 
 But there are also some [problems](https://github.com/abpframework/abp/issues/6126#issuecomment-841888235) with CAP in ABP. In short, an ABP app could have more than one DB connection string, but CAP can only have one, this cannot be solved at present. So if there is not any DB connection string of the current UOW is equal to CAP's, events will be published after the UOW is completed.
+
+
+> Now we have a better solution: https://github.com/EasyAbp/Abp.EventBus.Boxes.Dtm
