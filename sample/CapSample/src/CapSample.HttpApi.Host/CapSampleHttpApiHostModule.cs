@@ -11,7 +11,6 @@ using Microsoft.Extensions.Hosting;
 using CapSample.EntityFrameworkCore;
 using CapSample.MultiTenancy;
 using EasyAbp.Abp.EventBus.Cap;
-using EasyAbp.Abp.EventBus.CAP;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Microsoft.OpenApi.Models;
 using Savorboard.CAP.InMemoryMessageQueue;
