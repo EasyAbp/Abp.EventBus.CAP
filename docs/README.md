@@ -15,7 +15,7 @@ ABP vNext framework [CAP](https://github.com/dotnetcore/CAP) EventBus module.
 
     * EasyAbp.Abp.EventBus.CAP
     * EasyAbp.Abp.EventBus.Dashboard (if you need the CAP dashboard)
-    * EasyAbp.Abp.EventBus.EntityFramework (if you need CAP transactional outbox)
+    * EasyAbp.Abp.EventBus.EntityFrameworkCore (if you need CAP transactional outbox)
     * EasyAbp.Abp.EventBus.MongoDB (coming soon...)
     * DotNetCore.CAP.SqlServer (or other DB providers if you are using EF Core)
     * DotNetCore.CAP.MongoDB (if you are using MongoDB)
@@ -63,7 +63,7 @@ Before ABP 5.0, when you invoke PublishAsync, the bus will push the event to MQ 
 
 As you can see, after ABP 5.0, events are sent using outbox on UOW complete by default. CAP has a built-in transactional outbox, so we can implement it easily.
 
-If you install the `EasyAbp.Abp.EventBus.EntityFramework` module, events are published with CAP's transactional outbox. Otherwise, they are published on UOW completed. See the [CapDistributedEventBus](https://github.com/EasyAbp/Abp.EventBus.CAP/blob/master/src/EasyAbp.Abp.EventBus.CAP/CapDistributedEventBus.cs) for more information.
+If you install the `EasyAbp.Abp.EventBus.EntityFrameworkCore` module, events are published with CAP's transactional outbox. Otherwise, they are published on UOW completed. See the [CapDistributedEventBus](https://github.com/EasyAbp/Abp.EventBus.CAP/blob/master/src/EasyAbp.Abp.EventBus.CAP/CapDistributedEventBus.cs) for more information.
 
 But there are also some [problems](https://github.com/abpframework/abp/issues/6126#issuecomment-841888235) with CAP in ABP. In short, an ABP app could have more than one DB connection string, but CAP can only have one, this cannot be solved at present. So if there is not any DB connection string of the current UOW is equal to CAP's, events will be published after the UOW is completed.
 
