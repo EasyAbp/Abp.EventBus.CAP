@@ -4,7 +4,7 @@
 [![CAP version](https://img.shields.io/badge/dynamic/xml?style=flat-square&color=yellow&label=cap&query=%2F%2FProject%2FPropertyGroup%2FCapPackageVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2FEasyAbp%2FAbp.EventBus.CAP%2Fmaster%2FDirectory.Build.props)](https://cap.dotnetcore.xyz)
 [![NuGet](https://img.shields.io/nuget/v/EasyAbp.Abp.EventBus.CAP.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.EventBus.CAP)
 [![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.Abp.EventBus.CAP.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.EventBus.CAP)
-[![Discord online](https://badgen.net/discord/online-members/S6QaezrCRq?label=Discord)](https://discord.gg/S6QaezrCRq)
+[![Discord online](https://badgen.net/discord/online-members/xyg8TrRa27?label=Discord)](https://discord.gg/xyg8TrRa27)
 [![GitHub stars](https://img.shields.io/github/stars/EasyAbp/Abp.EventBus.CAP?style=social)](https://www.github.com/EasyAbp/Abp.EventBus.CAP)
 
 ABP vNext framework [CAP](https://github.com/dotnetcore/CAP) EventBus module.
