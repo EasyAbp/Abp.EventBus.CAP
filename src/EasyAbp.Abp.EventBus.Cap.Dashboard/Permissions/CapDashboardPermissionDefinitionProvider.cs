@@ -9,7 +9,7 @@ namespace EasyAbp.Abp.EventBus.CAP.Permissions
     {
         public override void Define(IPermissionDefinitionContext context)
         {
-            var myGroup = context.AddGroup(CapDashboardPermissions.GroupName, L("Permission:CapDashboard"), MultiTenancySides.Host);
+            var myGroup = context.AddGroup(CapDashboardPermissions.GroupName, L("Permission:CapDashboard"));
             myGroup.AddPermission(CapDashboardPermissions.Manage, L("Permission:Manage"), MultiTenancySides.Host);
         }
 

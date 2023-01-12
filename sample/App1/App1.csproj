@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,8 +10,8 @@
     <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="$(CapPackageVersion)" />
     <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="$(CapPackageVersion)" />
     <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="$(CapPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.*" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.0" />
     <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="$(AbpVersion)" />

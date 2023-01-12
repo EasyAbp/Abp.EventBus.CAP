@@ -17,13 +17,13 @@ public class AbpJsonSerializer : ISerializer
     {
         _jsonSerializer = jsonSerializer;
     }
-    
+
     public virtual string Serialize(Message message)
     {
         return _jsonSerializer.Serialize(message);
     }
 
-    public virtual Task<TransportMessage> SerializeAsync(Message message)
+    public virtual ValueTask<TransportMessage> SerializeAsync(Message message)
     {
         if (message == null)
         {
@@ -32,12 +32,12 @@ public class AbpJsonSerializer : ISerializer
 
         if (message.Value == null)
         {
-            return Task.FromResult(new TransportMessage(message.Headers, null));
+            return new ValueTask<TransportMessage>(new TransportMessage(message.Headers, null));
         }
 
         var json = _jsonSerializer.Serialize(message.Value);
-        
-        return Task.FromResult(new TransportMessage(message.Headers, Encoding.UTF8.GetBytes(json)));
+
+        return new ValueTask<TransportMessage>(new TransportMessage(message.Headers, Encoding.UTF8.GetBytes(json)));
     }
 
     public virtual Message Deserialize(string json)
@@ -45,16 +45,17 @@ public class AbpJsonSerializer : ISerializer
         return _jsonSerializer.Deserialize<Message>(json);
     }
 
-    public virtual Task<Message> DeserializeAsync(TransportMessage transportMessage, Type valueType)
+    public virtual ValueTask<Message> DeserializeAsync(TransportMessage transportMessage, Type valueType)
     {
-        if (valueType == null || transportMessage.Body == null)
+        if (valueType == null || transportMessage.Body.IsEmpty)
         {
-            return Task.FromResult(new Message(transportMessage.Headers, null));
+            return new ValueTask<Message>(new Message(transportMessage.Headers, null));
         }
 
-        var json = Encoding.UTF8.GetString(transportMessage.Body);
-        
-        return Task.FromResult(new Message(transportMessage.Headers, _jsonSerializer.Deserialize(valueType, json)));
+        var json = Encoding.UTF8.GetString(transportMessage.Body.ToArray());
+
+        return new ValueTask<Message>(new Message(transportMessage.Headers,
+            _jsonSerializer.Deserialize(valueType, json)));
     }
 
     public virtual object Deserialize(object value, Type valueType)
