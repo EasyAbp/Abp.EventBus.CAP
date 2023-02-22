@@ -18,7 +18,7 @@ public class AbpJsonSerializer : ISerializer
     public AbpJsonSerializer(IJsonSerializer jsonSerializer, IOptions<AbpSystemTextJsonSerializerOptions> jsonOptions)
     {
         _jsonSerializer = jsonSerializer;
-        CamelCase = jsonOptions.Value.JsonSerializerOptions.PropertyNamingPolicy == null ? false : true;
+        CamelCase = jsonOptions.Value.JsonSerializerOptions.PropertyNamingPolicy != null;
     }
 
     public virtual string Serialize(Message message)
