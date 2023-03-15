@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSample.HttpApi.Client.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSample.TestBase", "sample\CapSample\test\CapSample.TestBase\CapSample.TestBase.csproj", "{7726D18F-E3E1-4D5B-91D7-BD6104E703FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.EventBus.Cap.Dashboard", "src\EasyAbp.Abp.EventBus.Cap.Dashboard\EasyAbp.Abp.EventBus.Cap.Dashboard.csproj", "{240C7228-0933-412E-AD51-13AC1C8FC252}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.EventBus.CAP.Dashboard", "src\EasyAbp.Abp.EventBus.CAP.Dashboard\EasyAbp.Abp.EventBus.CAP.Dashboard.csproj", "{240C7228-0933-412E-AD51-13AC1C8FC252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
