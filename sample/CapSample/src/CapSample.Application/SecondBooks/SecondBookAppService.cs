@@ -21,7 +21,7 @@ public class SecondBookAppService : CapSampleAppService
     }
 
     [UnitOfWork(IsDisabled = true)]
-    public async Task<SecondBook> CreateAsync(string name)
+    public virtual async Task<SecondBook> CreateAsync(string name)
     {
         using var uow = UnitOfWorkManager.Begin(true, true);
         

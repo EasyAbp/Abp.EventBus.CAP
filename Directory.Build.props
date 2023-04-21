@@ -3,6 +3,7 @@
 
     <AbpVersion>7.1.0</AbpVersion>
     <CapPackageVersion>7.0.2</CapPackageVersion>
+    <CapInMemoryMessageQueuePackageVersion>7.0.0</CapInMemoryMessageQueuePackageVersion>
 
   </PropertyGroup>
 </Project>

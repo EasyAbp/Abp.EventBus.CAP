@@ -18,8 +18,8 @@ public class SecondBookCreatedEventHandler : IDistributedEventHandler<EntityCrea
         _repository = repository;
     }
     
-    [UnitOfWork]
-    public async Task HandleEventAsync(EntityCreatedEto<SecondBook> eventData)
+    [UnitOfWork(true)]
+    public virtual async Task HandleEventAsync(EntityCreatedEto<SecondBook> eventData)
     {
         var book = await _repository.GetAsync(eventData.Entity.Id);
         

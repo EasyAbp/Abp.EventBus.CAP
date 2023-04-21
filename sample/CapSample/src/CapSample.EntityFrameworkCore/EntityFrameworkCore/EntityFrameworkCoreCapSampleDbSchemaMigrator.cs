@@ -30,6 +30,11 @@ namespace CapSample.EntityFrameworkCore
                 .GetRequiredService<CapSampleDbContext>()
                 .Database
                 .MigrateAsync();
+
+            await _serviceProvider
+                .GetRequiredService<SecondDbContext>()
+                .Database
+                .MigrateAsync();
         }
     }
 }

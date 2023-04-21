@@ -25,7 +25,7 @@ public class BookAppService : CapSampleAppService
     }
 
     [UnitOfWork(IsDisabled = true)]
-    public async Task<Book> CreateAsync(string name)
+    public virtual async Task<Book> CreateAsync(string name)
     {
         using var uow = UnitOfWorkManager.Begin(true, true);
         
@@ -41,7 +41,7 @@ public class BookAppService : CapSampleAppService
     }
 
     [UnitOfWork(IsDisabled = true)]
-    public async Task<BookAndSecondBook> CreateWithSecondBookAsync(string name)
+    public virtual async Task<BookAndSecondBook> CreateWithSecondBookAsync(string name)
     {
         using var uow = UnitOfWorkManager.Begin(true, true);
         
