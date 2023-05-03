@@ -1,4 +1,5 @@
 using System;
+using System.Data.Common;
 using DotNetCore.CAP;
 using EasyAbp.Abp.EventBus.CAP;
 using Microsoft.EntityFrameworkCore;
