@@ -1,6 +1,6 @@
 ﻿using System;
 using DotNetCore.CAP;
-using EasyAbp.Abp.EventBus.CAP;
+using EasyAbp.Abp.EventBus.Cap;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
@@ -11,18 +11,18 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             return capOptions.UseDashboard(options =>
             {
-                options.UseAuth = true;
-                options.DefaultAuthenticationScheme = AbpCapDashboardAuthenticationHandler.SchemeName;
+                options.AuthorizationPolicy = AbpEventBusCapDashboardModule.CapDashboardAuthenticationPolicy;
             });
         }
-        
+
         public static CapOptions UseAbpDashboard(this CapOptions capOptions, Action<DashboardOptions> options)
         {
             options += dashboardOptions =>
             {
-                dashboardOptions.DefaultAuthenticationScheme ??= AbpCapDashboardAuthenticationHandler.SchemeName;
+                dashboardOptions.AuthorizationPolicy =
+                    AbpEventBusCapDashboardModule.CapDashboardAuthenticationPolicy;
             };
-            
+
             return capOptions.UseDashboard(options);
         }
     }

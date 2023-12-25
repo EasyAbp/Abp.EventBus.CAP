@@ -13,7 +13,7 @@ namespace EasyAbp.Abp.EventBus.CAP
         AuthenticationHandler<AbpCapDashboardAuthenticationSchemeOptions>
     {
         public static string SchemeName = "AbpCapDashboardScheme";
-        
+
         private readonly ICurrentPrincipalAccessor _currentPrincipalAccessor;
         private readonly IAuthorizationService _authorizationService;
 
@@ -22,8 +22,7 @@ namespace EasyAbp.Abp.EventBus.CAP
             IAuthorizationService authorizationService,
             IOptionsMonitor<AbpCapDashboardAuthenticationSchemeOptions> options,
             ILoggerFactory logger,
-            UrlEncoder encoder,
-            ISystemClock clock) : base(options, logger, encoder, clock)
+            UrlEncoder encoder) : base(options, logger, encoder)
         {
             _currentPrincipalAccessor = currentPrincipalAccessor;
             _authorizationService = authorizationService;
@@ -43,8 +42,9 @@ namespace EasyAbp.Abp.EventBus.CAP
             {
                 return AuthenticateResult.Fail(e);
             }
-            
-            return AuthenticateResult.Success(new AuthenticationTicket(_currentPrincipalAccessor.Principal, SchemeName));
+
+            return AuthenticateResult.Success(new AuthenticationTicket(_currentPrincipalAccessor.Principal,
+                SchemeName));
         }
     }
 }
