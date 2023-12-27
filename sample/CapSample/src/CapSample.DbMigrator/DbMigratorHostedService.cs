@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using CapSample.Data;
 using Serilog;
 using Volo.Abp;
+using Volo.Abp.Data;
 
 namespace CapSample.DbMigrator
 {
@@ -27,6 +28,7 @@ namespace CapSample.DbMigrator
                 options.Services.ReplaceConfiguration(_configuration);
                 options.UseAutofac();
                 options.Services.AddLogging(c => c.AddSerilog());
+                options.AddDataMigrationEnvironment();
             }))
             {
                 await application.InitializeAsync();
