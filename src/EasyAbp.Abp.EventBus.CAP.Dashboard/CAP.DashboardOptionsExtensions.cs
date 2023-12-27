@@ -12,6 +12,7 @@ namespace Microsoft.Extensions.DependencyInjection
             return capOptions.UseDashboard(options =>
             {
                 options.AuthorizationPolicy = AbpEventBusCapDashboardModule.CapDashboardAuthenticationPolicy;
+                options.AllowAnonymousExplicit = false;
             });
         }
 
@@ -21,6 +22,7 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 dashboardOptions.AuthorizationPolicy =
                     AbpEventBusCapDashboardModule.CapDashboardAuthenticationPolicy;
+                dashboardOptions.AllowAnonymousExplicit = false;
             };
 
             return capOptions.UseDashboard(options);
