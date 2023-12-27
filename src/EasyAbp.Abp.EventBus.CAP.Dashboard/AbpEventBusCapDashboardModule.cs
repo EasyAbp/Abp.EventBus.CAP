@@ -12,13 +12,22 @@ namespace EasyAbp.Abp.EventBus.Cap
     [DependsOn(typeof(AbpAuthorizationModule))]
     public class AbpEventBusCapDashboardModule : AbpModule
     {
+        public static string CapDashboardAuthenticationPolicy { get; set; } = "CapDashboardAuthenticationPolicy";
+
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAuthentication()
+            context.Services
+                .AddAuthorization(options =>
+                {
+                    options.AddPolicy(CapDashboardAuthenticationPolicy, policy => policy
+                        .AddAuthenticationSchemes(AbpCapDashboardAuthenticationHandler.SchemeName)
+                        .RequireAuthenticatedUser());
+                })
+                .AddAuthentication()
                 .AddScheme<AbpCapDashboardAuthenticationSchemeOptions, AbpCapDashboardAuthenticationHandler>(
                     AbpCapDashboardAuthenticationHandler.SchemeName,
                     options => { options.PermissionName = CapDashboardPermissions.Manage; });
-            
+
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
                 options.FileSets.AddEmbedded<AbpEventBusCapDashboardModule>();
