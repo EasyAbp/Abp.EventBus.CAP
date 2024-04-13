@@ -8,8 +8,8 @@ public static class CapPublisherExtension
 {
     public static IDisposable UseTransaction(this ICapPublisher capPublisher, ICapTransaction capTransaction)
     {
-        var previousValue = capPublisher.Transaction.Value;
-        capPublisher.Transaction.Value = capTransaction;
-        return new DisposeAction(() => capPublisher.Transaction.Value = previousValue);
+        var previousValue = capPublisher.Transaction;
+        capPublisher.Transaction = capTransaction;
+        return new DisposeAction(() => capPublisher.Transaction = previousValue);
     }
 }

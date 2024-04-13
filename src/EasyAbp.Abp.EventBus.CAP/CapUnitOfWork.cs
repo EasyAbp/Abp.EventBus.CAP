@@ -36,7 +36,7 @@ public class CapUnitOfWork : UnitOfWork
         if (factory is not null)
         {
             api = factory.Create(api);
-            CapTransaction = CapPublisher.Transaction.Value;
+            CapTransaction = CapPublisher.Transaction;
         }
         
         base.AddTransactionApi(key, api);

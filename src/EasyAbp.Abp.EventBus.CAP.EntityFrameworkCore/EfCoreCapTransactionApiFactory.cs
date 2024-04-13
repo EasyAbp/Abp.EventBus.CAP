@@ -69,7 +69,7 @@ public class EfCoreCapTransactionApiFactory : ICapTransactionApiFactory
         capTransaction.DbTransaction = originalApi.DbContextTransaction;
         capTransaction.AutoCommit = false;
 
-        Publisher.Transaction.Value = capTransaction;
+        Publisher.Transaction = capTransaction;
 
         return (IDbContextTransaction)Activator.CreateInstance(dbProviderInfo.CapEfDbTransactionType, capTransaction);
     }
