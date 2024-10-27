@@ -1,9 +1,9 @@
 <Project>
   <PropertyGroup>
 
-    <AbpVersion>8.2.0</AbpVersion>
-    <CapPackageVersion>8.2.0</CapPackageVersion>
-    <CapInMemoryMessageQueuePackageVersion>8.2.0</CapInMemoryMessageQueuePackageVersion>
+    <AbpVersion>8.3.2</AbpVersion>
+    <CapPackageVersion>8.3.0</CapPackageVersion>
+    <CapInMemoryMessageQueuePackageVersion>8.2.1</CapInMemoryMessageQueuePackageVersion>
 
   </PropertyGroup>
 </Project>
