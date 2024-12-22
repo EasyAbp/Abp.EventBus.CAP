@@ -84,7 +84,7 @@ namespace App2
             {
                 app.UseExceptionHandler("/Error");
             }
-            app.UseStaticFiles();
+            app.MapAbpStaticAssets();
             app.UseSerilogRequestLogging();
             app.UseRouting();
             app.UseAbpSerilogEnrichers();

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <RootNamespace>EasyAbp.Abp.EventBus.CAP</RootNamespace>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
@@ -11,7 +11,7 @@
         <PackageReference Include="Volo.Abp.TestBase" Version="$(AbpVersion)" />
         <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
         <PackageReference Include="Volo.Abp.Auditing.Contracts" Version="$(AbpVersion)" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
         <PackageReference Include="NSubstitute" Version="5.1.0" />
         <PackageReference Include="Shouldly" Version="4.2.1" />
         <PackageReference Include="xunit" Version="2.6.1" />

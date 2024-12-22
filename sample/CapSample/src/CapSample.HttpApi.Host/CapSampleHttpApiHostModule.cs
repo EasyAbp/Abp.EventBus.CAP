@@ -235,7 +235,7 @@ namespace CapSample
             }
 
             app.UseCorrelationId();
-            app.UseStaticFiles();
+            app.MapAbpStaticAssets();
             app.UseRouting();
             app.UseCors();
             app.UseAuthentication();
