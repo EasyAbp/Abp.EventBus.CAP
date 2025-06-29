@@ -4,6 +4,7 @@ using CapSample.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -12,9 +13,11 @@ using Volo.Abp.EntityFrameworkCore;
 namespace CapSample.Migrations
 {
     [DbContext(typeof(CapSampleDbContext))]
-    partial class CapSampleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250629111217_Upgraded_To_Abp_9_2")]
+    partial class Upgraded_To_Abp_9_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
