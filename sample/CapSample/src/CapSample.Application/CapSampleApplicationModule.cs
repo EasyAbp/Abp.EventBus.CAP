@@ -11,8 +11,9 @@ namespace CapSample
 {
     [DependsOn(
         typeof(CapSampleDomainModule),
-        typeof(AbpAccountApplicationModule),
         typeof(CapSampleApplicationContractsModule),
+        typeof(AbpAutoMapperModule),
+        typeof(AbpAccountApplicationModule),
         typeof(AbpIdentityApplicationModule),
         typeof(AbpPermissionManagementApplicationModule),
         typeof(AbpTenantManagementApplicationModule),

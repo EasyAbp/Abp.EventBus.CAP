@@ -235,8 +235,8 @@ namespace CapSample
             }
 
             app.UseCorrelationId();
-            app.MapAbpStaticAssets();
             app.UseRouting();
+            app.MapAbpStaticAssets();
             app.UseCors();
             app.UseAuthentication();
             app.UseJwtTokenMiddleware();
