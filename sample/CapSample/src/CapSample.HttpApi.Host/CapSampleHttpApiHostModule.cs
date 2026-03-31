@@ -12,7 +12,7 @@ using CapSample.EntityFrameworkCore;
 using CapSample.MultiTenancy;
 using EasyAbp.Abp.EventBus.Cap;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Savorboard.CAP.InMemoryMessageQueue;
 using Volo.Abp;
 using Volo.Abp.Account;

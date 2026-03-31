@@ -13,7 +13,7 @@
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
     <PackageReference Include="DotNetCore.CAP.Dashboard" Version="$(CapPackageVersion)" />
     <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="$(CapPackageVersion)" />
     <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="$(CapPackageVersion)" />
