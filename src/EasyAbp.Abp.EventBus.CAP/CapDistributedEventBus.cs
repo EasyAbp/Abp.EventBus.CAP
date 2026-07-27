@@ -27,6 +27,7 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
     //TODO: Accessing to the List<IEventHandlerFactory> may not be thread-safe!
     protected ConcurrentDictionary<Type, List<IEventHandlerFactory>> HandlerFactories { get; }
     protected ConcurrentDictionary<string, Type> EventTypes { get; }
+    protected ConcurrentDictionary<string, List<IEventHandlerFactory>> DynamicHandlerFactories { get; }
 
     public CapDistributedEventBus(IServiceScopeFactory serviceScopeFactory,
         IOptions<AbpDistributedEventBusOptions> distributedEventBusOptions,
@@ -40,9 +41,16 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
         AbpDistributedEventBusOptions = distributedEventBusOptions.Value;
         HandlerFactories = new ConcurrentDictionary<Type, List<IEventHandlerFactory>>();
         EventTypes = new ConcurrentDictionary<string, Type>();
+        DynamicHandlerFactories = new ConcurrentDictionary<string, List<IEventHandlerFactory>>();
     }
 
     public override IDisposable Subscribe(Type eventType, IEventHandlerFactory factory)
+    {
+        //This is handled by CAP ConsumerServiceSelector
+        throw new NotImplementedException();
+    }
+
+    public override IDisposable Subscribe(string eventName, IEventHandlerFactory handler)
     {
         //This is handled by CAP ConsumerServiceSelector
         throw new NotImplementedException();
@@ -98,9 +106,37 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
         GetOrCreateHandlerFactories(eventType).Locking(factories => factories.Clear());
     }
 
+    public override void Unsubscribe(string eventName, IEventHandlerFactory factory)
+    {
+        GetOrCreateDynamicHandlerFactories(eventName).Locking(factories => factories.Remove(factory));
+    }
+
+    public override void Unsubscribe(string eventName, IEventHandler handler)
+    {
+        GetOrCreateDynamicHandlerFactories(eventName)
+            .Locking(factories =>
+            {
+                factories.RemoveAll(
+                    factory =>
+                        factory is SingleInstanceHandlerFactory singleInstanceFactory &&
+                        singleInstanceFactory.HandlerInstance == handler
+                );
+            });
+    }
+
+    public override void UnsubscribeAll(string eventName)
+    {
+        GetOrCreateDynamicHandlerFactories(eventName).Locking(factories => factories.Clear());
+    }
+
     public IDisposable Subscribe<TEvent>(IDistributedEventHandler<TEvent> handler) where TEvent : class
     {
         return Subscribe(typeof(TEvent), handler);
+    }
+
+    public IDisposable Subscribe(string eventName, IDistributedEventHandler<DynamicEventData> handler)
+    {
+        return Subscribe(eventName, new SingleInstanceHandlerFactory(handler));
     }
 
     public virtual Task PublishAsync<TEvent>(TEvent eventData, bool onUnitOfWorkComplete = true,
@@ -145,6 +181,26 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
         await PublishToEventBusAsync(eventType, eventData);
     }
 
+    public override Task PublishAsync(string eventName, object eventData, bool onUnitOfWorkComplete = true)
+    {
+        return PublishAsync(eventName, eventData, onUnitOfWorkComplete, useOutbox: true);
+    }
+
+    public virtual Task PublishAsync(string eventName, object eventData, bool onUnitOfWorkComplete = true,
+        bool useOutbox = true)
+    {
+        var eventType = EventTypes.GetOrDefault(eventName);
+        var dynamicEventData = eventData as DynamicEventData ?? new DynamicEventData(eventName, eventData);
+
+        if (eventType != null)
+        {
+            return PublishAsync(eventType, ConvertDynamicEventData(dynamicEventData.Data, eventType),
+                onUnitOfWorkComplete, useOutbox);
+        }
+
+        return PublishAsync(typeof(DynamicEventData), dynamicEventData, onUnitOfWorkComplete, useOutbox);
+    }
+
     protected override async Task PublishToEventBusAsync(Type eventType, object eventData)
     {
         var eventName = EventNameAttribute.GetNameOrDefault(eventType);
@@ -168,6 +224,34 @@ public class CapDistributedEventBus : EventBusBase, IDistributedEventBus
         }
 
         return handlerFactoryList.ToArray();
+    }
+
+    protected override IEnumerable<EventTypeWithEventHandlerFactories> GetDynamicHandlerFactories(string eventName)
+    {
+        var eventType = GetEventTypeByEventName(eventName);
+        if (eventType != null)
+        {
+            return GetHandlerFactories(eventType);
+        }
+
+        var result = new List<EventTypeWithEventHandlerFactories>();
+
+        foreach (var handlerFactory in DynamicHandlerFactories.Where(hf => hf.Key == eventName))
+        {
+            result.Add(new EventTypeWithEventHandlerFactories(typeof(DynamicEventData), handlerFactory.Value));
+        }
+
+        return result;
+    }
+
+    protected override Type GetEventTypeByEventName(string eventName)
+    {
+        return EventTypes.GetOrDefault(eventName);
+    }
+
+    private List<IEventHandlerFactory> GetOrCreateDynamicHandlerFactories(string eventName)
+    {
+        return DynamicHandlerFactories.GetOrAdd(eventName, _ => new List<IEventHandlerFactory>());
     }
 
     private List<IEventHandlerFactory> GetOrCreateHandlerFactories(Type eventType)
